@@ -3,24 +3,53 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="便利屋 百武 — 部屋掃除・犬の散歩・除雪・特殊清掃まで、暮らしの「困った」をまるごとお引き受けします。" />
-<title>便利屋 百武 | 暮らしの困りごと、まるごとお任せください</title>
+<meta name="description" content="便利屋ひまわり隊 — お掃除・片付けサービス、粗大ゴミの片付け、除雪、各種代行、パソコンサポートまで幅広くお受けします。" />
+<title>便利屋ひまわり隊 | その他、何でもお受けします</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- 背景の装飾 -->
+<svg class="bg-deco" aria-hidden="true" width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="cloud" viewBox="0 0 100 60">
+      <path d="M20,40 Q5,40 5,30 Q5,15 20,18 Q22,5 40,8 Q55,0 65,12 Q85,8 88,28 Q98,32 92,45 Q70,52 50,48 Q30,52 20,40 Z" fill="#ffffff"/>
+    </symbol>
+    <symbol id="star" viewBox="0 0 24 24">
+      <path d="M12 2 L14.5 9 L22 9.5 L16 14.5 L18 22 L12 17.5 L6 22 L8 14.5 L2 9.5 L9.5 9 Z" fill="#ffd966"/>
+    </symbol>
+    <symbol id="heart" viewBox="0 0 24 24">
+      <path d="M12 21 C-7 8 8 -3 12 6 C16 -3 31 8 12 21 Z" fill="#f8a6b3"/>
+    </symbol>
+    <symbol id="sparkle" viewBox="0 0 24 24">
+      <path d="M12 2 L13 10 L22 12 L13 14 L12 22 L11 14 L2 12 L11 10 Z" fill="#ffd966"/>
+    </symbol>
+  </defs>
+</svg>
+
 <header class="header">
   <div class="container header__inner">
     <a href="#top" class="header__logo">
-      <span class="header__logo-mark">便</span>
-      <span class="header__logo-text">便利屋 百武</span>
+      <span class="header__logo-mark" aria-hidden="true">
+        <!-- マスコット -->
+        <svg viewBox="0 0 60 60" width="40" height="40">
+          <circle cx="30" cy="32" r="22" fill="#ffd9a8"/>
+          <path d="M10,28 Q10,8 30,8 Q50,8 50,28 L50,30 L10,30 Z" fill="#f7a04a"/>
+          <circle cx="22" cy="32" r="2.5" fill="#3a352e"/>
+          <circle cx="38" cy="32" r="2.5" fill="#3a352e"/>
+          <circle cx="18" cy="38" r="3" fill="#f8a6b3" opacity="0.6"/>
+          <circle cx="42" cy="38" r="3" fill="#f8a6b3" opacity="0.6"/>
+          <path d="M22,42 Q30,50 38,42" stroke="#3a352e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="header__logo-text">便利屋ひまわり隊</span>
     </a>
     <nav class="nav">
       <ul class="nav__list">
-        <li><a href="#services">サービス</a></li>
-        <li><a href="#flow">ご依頼の流れ</a></li>
+        <li><a href="#problems">こんな時に</a></li>
+        <li><a href="#services">できること</a></li>
         <li><a href="#price">料金</a></li>
-        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#flow">ご依頼の流れ</a></li>
         <li><a href="#contact" class="nav__cta">お問い合わせ</a></li>
       </ul>
       <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false">
@@ -32,170 +61,485 @@
 
 <main id="top">
 
+  <!-- ヒーロー -->
   <section class="hero">
+    <div class="hero__clouds" aria-hidden="true">
+      <svg class="hero__cloud hero__cloud--1"><use href="#cloud"/></svg>
+      <svg class="hero__cloud hero__cloud--2"><use href="#cloud"/></svg>
+      <svg class="hero__cloud hero__cloud--3"><use href="#cloud"/></svg>
+    </div>
+
     <div class="container hero__inner">
-      <p class="hero__lead">暮らしの「困った」を、まるごと。</p>
-      <h1 class="hero__title">
-        どんな小さなご依頼も、<br />
-        どんな大きな困りごとも。
-      </h1>
-      <p class="hero__desc">
-        部屋のお掃除から、犬の散歩、除雪、特殊清掃まで。<br />
-        地域に根ざした便利屋として、誠実にお引き受けいたします。
-      </p>
-      <div class="hero__cta">
-        <a href="#contact" class="btn btn--primary">無料で相談する</a>
-        <a href="tel:0000000000" class="btn btn--ghost">📞 お電話でのご相談</a>
+      <div class="hero__text">
+        <p class="hero__lead">
+          <span>地域のみなさまの</span>
+          <span class="hero__lead-accent">「困った！」を解決します</span>
+        </p>
+        <h1 class="hero__title">
+          なんでも<br />
+          お手伝いします！
+        </h1>
+        <p class="hero__desc">
+          お掃除・片付けサービス・粗大ゴミの片付け・<br />
+          除雪・代行・パソコンサポートまで。<br />
+          <strong>お電話一本でかけつけます。</strong>
+        </p>
+
+        <div class="hero__cta">
+          <a href="tel:0123259947" class="btn btn--phone">
+            <span class="btn__icon">📞</span>
+            <span>
+              <small>お気軽にお電話ください</small>
+              <strong>0123-25-9947</strong>
+            </span>
+          </a>
+          <a href="#contact" class="btn btn--mail">
+            <span class="btn__icon">✉️</span>
+            <span>メールでご相談</span>
+          </a>
+        </div>
+
+        <ul class="hero__points">
+          <li><span class="hero__point-icon">⭕</span>見積もり<strong>無料</strong></li>
+          <li><span class="hero__point-icon">⭕</span><strong>幅広い業務</strong>対応</li>
+          <li><span class="hero__point-icon">⭕</span><strong>秘密</strong>厳守</li>
+        </ul>
       </div>
-      <ul class="hero__points">
-        <li>✔ 見積もり無料</li>
-        <li>✔ 即日対応可</li>
-        <li>✔ 秘密厳守</li>
-      </ul>
+
+      <!-- 大きなマスコット -->
+      <div class="hero__mascot" aria-hidden="true">
+        <svg viewBox="0 0 280 320" class="mascot">
+          <!-- 影 -->
+          <ellipse cx="140" cy="305" rx="90" ry="10" fill="#3a352e" opacity="0.1"/>
+          <!-- 体 -->
+          <path d="M70,290 Q60,200 90,180 L190,180 Q220,200 210,290 Z" fill="#f7a04a"/>
+          <!-- 腕（左：箒） -->
+          <rect x="55" y="190" width="20" height="80" rx="10" fill="#ffd9a8"/>
+          <rect x="48" y="100" width="6" height="100" fill="#a07550"/>
+          <path d="M30,100 L70,100 L65,80 L35,80 Z" fill="#f7c873"/>
+          <line x1="40" y1="80" x2="40" y2="100" stroke="#a07550" stroke-width="1.5"/>
+          <line x1="50" y1="80" x2="50" y2="100" stroke="#a07550" stroke-width="1.5"/>
+          <line x1="60" y1="80" x2="60" y2="100" stroke="#a07550" stroke-width="1.5"/>
+          <!-- 腕（右） -->
+          <rect x="205" y="190" width="20" height="60" rx="10" fill="#ffd9a8"/>
+          <circle cx="215" cy="255" r="14" fill="#ffd9a8"/>
+          <!-- エプロンの紐 -->
+          <path d="M100,180 L100,200 L180,200 L180,180" stroke="#fff" stroke-width="3" fill="none" opacity="0.5"/>
+          <!-- 顔 -->
+          <circle cx="140" cy="120" r="65" fill="#ffd9a8"/>
+          <!-- 帽子 -->
+          <path d="M75,115 Q75,55 140,55 Q205,55 205,115 L205,125 L75,125 Z" fill="#7fc8e8"/>
+          <rect x="70" y="118" width="140" height="12" rx="6" fill="#5fa9c8"/>
+          <circle cx="140" cy="65" r="8" fill="#fff"/>
+          <!-- ほっぺ -->
+          <circle cx="105" cy="135" r="10" fill="#f8a6b3" opacity="0.7"/>
+          <circle cx="175" cy="135" r="10" fill="#f8a6b3" opacity="0.7"/>
+          <!-- 目（笑顔） -->
+          <path d="M115,125 Q120,120 125,125" stroke="#3a352e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M155,125 Q160,120 165,125" stroke="#3a352e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <!-- 口 -->
+          <path d="M125,150 Q140,165 155,150" stroke="#3a352e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <!-- きらきら -->
+          <path d="M70,40 L73,50 L83,53 L73,56 L70,66 L67,56 L57,53 L67,50 Z" fill="#ffd966"/>
+          <path d="M220,80 L222,87 L229,89 L222,91 L220,98 L218,91 L211,89 L218,87 Z" fill="#ffd966"/>
+        </svg>
+      </div>
     </div>
   </section>
 
+  <!-- お困りごと -->
+  <section id="problems" class="section problems">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">
+          <span class="section__title-emoji">💭</span>
+          こんなお困りごと、ありませんか？
+        </h2>
+      </header>
+
+      <div class="problems__grid">
+        <div class="bubble bubble--1">
+          <span class="bubble__emoji">💡</span>
+          <p>電球が切れたけど、<br />高くて届かない…</p>
+        </div>
+        <div class="bubble bubble--2">
+          <span class="bubble__emoji">🌿</span>
+          <p>害虫や外まわりを<br />まとめて相談したい…</p>
+        </div>
+        <div class="bubble bubble--3">
+          <span class="bubble__emoji">📦</span>
+          <p>大きなゴミを<br />運び出せない…</p>
+        </div>
+        <div class="bubble bubble--4">
+          <span class="bubble__emoji">🛒</span>
+          <p>買い物に<br />行くのが大変…</p>
+        </div>
+        <div class="bubble bubble--5">
+          <span class="bubble__emoji">❄️</span>
+          <p>雪かきが<br />追いつかない…</p>
+        </div>
+        <div class="bubble bubble--6">
+          <span class="bubble__emoji">💻</span>
+          <p>パソコンや集客のことを<br />誰かに聞きたい…</p>
+        </div>
+      </div>
+
+      <div class="problems__answer">
+        <p>ぜんぶ、私たちにお任せください！</p>
+        <span class="problems__answer-arrow" aria-hidden="true">⬇</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- できること -->
   <section id="services" class="section services">
     <div class="container">
       <header class="section__head">
-        <p class="section__eyebrow">SERVICES</p>
-        <h2 class="section__title">サービス内容</h2>
-        <p class="section__desc">日常のちょっとしたお困りごとから、人にはなかなか頼みにくいことまで、幅広くお引き受けいたします。</p>
+        <p class="section__eyebrow">できること</p>
+        <h2 class="section__title">
+          <span class="section__title-emoji">✨</span>
+          こんなことを<br class="sp-only" />お手伝いします
+        </h2>
+        <p class="section__desc">どんな小さなことでも、お気軽にどうぞ。</p>
       </header>
 
       <div class="services__grid">
-        <article class="card">
-          <div class="card__icon">🧹</div>
-          <h3 class="card__title">お部屋・水まわり清掃</h3>
-          <p class="card__desc">日々のお掃除から、キッチン・浴室・トイレなどの徹底クリーニングまで。一人暮らしのお部屋もお任せください。</p>
+
+        <article class="service-card service-card--orange">
+          <div class="service-card__icon"><span>🧹</span></div>
+          <h3>お掃除・<br />片付けサービス</h3>
+          <p>お部屋・キッチン・水まわりなど、暮らしの中の片付けをお手伝いします。</p>
+          <ul>
+            <li>日常のお掃除</li>
+            <li>片付け</li>
+            <li>水まわり</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card__icon">🐕</div>
-          <h3 class="card__title">犬の散歩・ペットのお世話</h3>
-          <p class="card__desc">お忙しい日や体調が優れない時に、大切なペットのお散歩や食事のお世話を代行いたします。</p>
+        <article class="service-card service-card--yellow">
+          <div class="service-card__icon"><span>📦</span></div>
+          <h3>不用品・粗大ゴミの<br />片付け</h3>
+          <p>大きな家具や粗大ゴミなど、自分では動かしにくい物の片付けをお手伝いします。</p>
+          <ul>
+            <li>粗大ゴミ</li>
+            <li>不用品</li>
+            <li>搬出補助</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card__icon">❄️</div>
-          <h3 class="card__title">除雪・雪下ろし</h3>
-          <p class="card__desc">玄関先や駐車場、屋根の雪下ろしまで。ご高齢の方やお留守のお宅も安心してお任せください。</p>
+        <article class="service-card service-card--pink">
+          <div class="service-card__icon"><span>🏠</span></div>
+          <h3>ゴミ屋敷の<br />片付け</h3>
+          <p>大量の荷物や生活ゴミで手をつけにくいお部屋も、まずはご相談ください。</p>
+          <ul>
+            <li>室内片付け</li>
+            <li>仕分け</li>
+            <li>秘密厳守</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card__icon">🏠</div>
-          <h3 class="card__title">特殊清掃・遺品整理</h3>
-          <p class="card__desc">孤独死現場の原状回復、ご遺品の整理など、専門技術と細やかな配慮でお引き受けいたします。秘密厳守です。</p>
+        <article class="service-card service-card--blue">
+          <div class="service-card__icon"><span>🚚</span></div>
+          <h3>格安引越しの<br />お手伝い</h3>
+          <p>荷物運びやちょっとした引越し作業を、必要な分だけお手伝いします。</p>
+          <ul>
+            <li>荷物運び</li>
+            <li>搬入搬出</li>
+            <li>小規模引越し</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card__icon">📦</div>
-          <h3 class="card__title">不用品回収・粗大ごみ処分</h3>
-          <p class="card__desc">家具・家電の処分、お引っ越し前後の片付けなど、運び出しから処分まで一括で対応いたします。</p>
+        <article class="service-card service-card--mint">
+          <div class="service-card__icon"><span>☕</span></div>
+          <h3>お話し相手</h3>
+          <p>ひとりで過ごす時間が長い方の、ちょっとしたお話し相手になります。</p>
+          <ul>
+            <li>見守り</li>
+            <li>雑談</li>
+            <li>ご家族の安心</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card__icon">🛠️</div>
-          <h3 class="card__title">家具組立・ちょっとした修繕</h3>
-          <p class="card__desc">家具の組み立て、電球交換、網戸の張替えなど、一つだけのご依頼でも遠慮なくお声がけください。</p>
+        <article class="service-card service-card--blue">
+          <div class="service-card__icon"><span>🛒</span></div>
+          <h3>買物代行</h3>
+          <p>日用品や食料品など、外出が難しい時のお買い物を代行します。</p>
+          <ul>
+            <li>日用品</li>
+            <li>食料品</li>
+            <li>近隣のおつかい</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card__icon">🌿</div>
-          <h3 class="card__title">草刈り・庭木の手入れ</h3>
-          <p class="card__desc">お庭の草刈り、剪定、落ち葉の片付けなど、季節に応じたお手入れを承ります。</p>
+        <article class="service-card service-card--orange">
+          <div class="service-card__icon"><span>🔌</span></div>
+          <h3>家電の設置・<br />取り付け</h3>
+          <p>家電の設置や取り付けなど、少し人手がほしい作業をご相談ください。</p>
+          <ul>
+            <li>設置補助</li>
+            <li>取り付け</li>
+            <li>電球交換</li>
+          </ul>
         </article>
 
-        <article class="card">
-          <div class="card__icon">👵</div>
-          <h3 class="card__title">買い物代行・付き添い</h3>
-          <p class="card__desc">日々のお買い物、通院の付き添いなど、ご家族のような気持ちでサポートいたします。</p>
+        <article class="service-card service-card--mint">
+          <div class="service-card__icon"><span>🐜</span></div>
+          <h3>害虫駆除</h3>
+          <p>害虫まわりのお困りごとも、状況をお聞きして対応します。</p>
+          <ul>
+            <li>害虫対策</li>
+            <li>現地確認</li>
+            <li>ご相談</li>
+          </ul>
         </article>
 
-        <article class="card card--other">
-          <div class="card__icon">💬</div>
-          <h3 class="card__title">その他、何でもご相談ください</h3>
-          <p class="card__desc">「こんなこと頼んでいいのかな…」と思うようなことでも構いません。まずはお気軽にご相談ください。</p>
+        <article class="service-card service-card--pink">
+          <div class="service-card__icon"><span>💐</span></div>
+          <h3>遺品整理・<br />お焚き上げ</h3>
+          <p>大切なお品を丁寧に扱い、心を込めて整理のお手伝いをします。</p>
+          <ul>
+            <li>遺品整理</li>
+            <li>お焚き上げ</li>
+            <li>秘密厳守</li>
+          </ul>
         </article>
+
+        <article class="service-card service-card--blue">
+          <div class="service-card__icon"><span>❄️</span></div>
+          <h3>除雪・雪かき・<br />屋根の雪下ろし</h3>
+          <p>玄関前や駐車場、屋根の雪下ろしまで冬のお困りごとをお受けします。</p>
+          <ul>
+            <li>除雪</li>
+            <li>雪かき</li>
+            <li>屋根の雪下ろし</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--yellow">
+          <div class="service-card__icon"><span>🧑‍💼</span></div>
+          <h3>代理出席</h3>
+          <p>事情があって出席が難しい場面の代理対応もご相談ください。</p>
+          <ul>
+            <li>代理対応</li>
+            <li>事前相談</li>
+            <li>柔軟対応</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--orange">
+          <div class="service-card__icon"><span>💻</span></div>
+          <h3>パソコン<br />サポート</h3>
+          <p>設定や操作で困った時、身近な相談相手としてサポートします。</p>
+          <ul>
+            <li>初期設定</li>
+            <li>操作相談</li>
+            <li>トラブル相談</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--mint">
+          <div class="service-card__icon"><span>🌐</span></div>
+          <h3>ホームページ<br />制作</h3>
+          <p>お店やサービスのホームページ制作もお受けしています。</p>
+          <ul>
+            <li>制作相談</li>
+            <li>更新</li>
+            <li>公開サポート</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--blue">
+          <div class="service-card__icon"><span>📈</span></div>
+          <h3>集客<br />コンサルティング</h3>
+          <p>集客や販促の相談など、事業まわりのお困りごともお受けします。</p>
+          <ul>
+            <li>集客相談</li>
+            <li>販促</li>
+            <li>改善提案</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--pink">
+          <div class="service-card__icon"><span>💬</span></div>
+          <h3>就職・恋愛・<br />離婚相談</h3>
+          <p>人に話しづらい相談も、まずはお気軽にお話しください。</p>
+          <ul>
+            <li>就職相談</li>
+            <li>恋愛相談</li>
+            <li>離婚相談</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--yellow">
+          <div class="service-card__icon"><span>♻️</span></div>
+          <h3>リサイクル<br />出張買取</h3>
+          <p>使わなくなった品物の出張買取についてもご相談いただけます。</p>
+          <ul>
+            <li>出張買取</li>
+            <li>査定相談</li>
+            <li>リサイクル</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--orange">
+          <div class="service-card__icon"><span>🛠️</span></div>
+          <h3>雨漏り修理</h3>
+          <p>雨漏りが気になる時は、状況確認からお気軽にご相談ください。</p>
+          <ul>
+            <li>雨漏り</li>
+            <li>修理相談</li>
+            <li>現地確認</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--mint">
+          <div class="service-card__icon"><span>🙏</span></div>
+          <h3>お墓掃除・<br />お墓参り代行</h3>
+          <p>遠方や多忙で行けない時のお墓掃除・お墓参りを代行します。</p>
+          <ul>
+            <li>お墓掃除</li>
+            <li>お墓参り代行</li>
+            <li>ご報告</li>
+          </ul>
+        </article>
+
+        <article class="service-card service-card--pink service-card--wide">
+          <div class="service-card__icon"><span>💬</span></div>
+          <h3>その他、何でもお受けします</h3>
+          <p>「これも頼めるかな…？」と思うことでも大丈夫。<br />まずはお気軽にお電話ください。</p>
+        </article>
+
       </div>
     </div>
   </section>
 
+  <!-- 料金 -->
+  <section id="price" class="section price">
+    <div class="container">
+      <header class="section__head">
+        <p class="section__eyebrow">料金</p>
+        <h2 class="section__title">
+          <span class="section__title-emoji">💰</span>
+          まずは内容をお聞きしてお見積もりします
+        </h2>
+      </header>
+
+      <div class="price__big">
+        <p class="price__big-label">基本料金</p>
+        <p class="price__big-amount">
+          <span class="price__big-prefix">1時間</span>
+          <strong>3,300<span>円</span></strong>
+          <span class="price__big-suffix">〜</span>
+        </p>
+        <p class="price__big-note">お見積もりは<strong>完全無料！</strong></p>
+      </div>
+
+      <div class="price__table">
+        <div class="price__row">
+          <div>🧹 お掃除・片付けサービス</div>
+          <div>5,500円〜</div>
+        </div>
+        <div class="price__row">
+          <div>📦 不用品・粗大ゴミの片付け</div>
+          <div>お見積もり</div>
+        </div>
+        <div class="price__row">
+          <div>❄️ 除雪・雪かき・屋根の雪下ろし</div>
+          <div>5,500円〜</div>
+        </div>
+        <div class="price__row">
+          <div>💻 パソコンサポート・ホームページ制作</div>
+          <div>お見積もり</div>
+        </div>
+        <div class="price__row">
+          <div>💬 代理・相談・各種代行</div>
+          <div>お見積もり</div>
+        </div>
+      </div>
+      <p class="price__note">※ 表示はすべて税込価格です。出張費・資材費・作業内容に応じた費用が別途かかる場合があります。</p>
+    </div>
+  </section>
+
+  <!-- ご依頼の流れ -->
   <section id="flow" class="section flow">
     <div class="container">
       <header class="section__head">
-        <p class="section__eyebrow">FLOW</p>
-        <h2 class="section__title">ご依頼の流れ</h2>
+        <p class="section__eyebrow">ご依頼の流れ</p>
+        <h2 class="section__title">
+          <span class="section__title-emoji">📝</span>
+          かんたん4ステップ
+        </h2>
       </header>
+
       <ol class="flow__list">
         <li class="flow__item">
-          <span class="flow__num">01</span>
-          <h3 class="flow__title">お問い合わせ</h3>
-          <p>お電話・LINE・フォームからご連絡ください。24時間受付しております。</p>
+          <div class="flow__num">1</div>
+          <div class="flow__icon">📞</div>
+          <h3>お電話<br />またはメール</h3>
+          <p>「○○ができますか？」のご相談だけでもOKです。</p>
         </li>
         <li class="flow__item">
-          <span class="flow__num">02</span>
-          <h3 class="flow__title">ヒアリング・お見積もり</h3>
-          <p>ご依頼内容をお伺いし、無料でお見積もりをお出しいたします。</p>
+          <div class="flow__num">2</div>
+          <div class="flow__icon">📋</div>
+          <h3>お見積もり<br />（無料）</h3>
+          <p>ご依頼内容をお伺いし、料金をお伝えします。</p>
         </li>
         <li class="flow__item">
-          <span class="flow__num">03</span>
-          <h3 class="flow__title">日程調整・作業</h3>
-          <p>ご都合のよい日時にお伺いし、丁寧に作業をいたします。</p>
+          <div class="flow__num">3</div>
+          <div class="flow__icon">🚗</div>
+          <h3>お伺いして<br />作業</h3>
+          <p>ご都合のよい日時にお伺いし、丁寧に作業します。</p>
         </li>
         <li class="flow__item">
-          <span class="flow__num">04</span>
-          <h3 class="flow__title">お支払い</h3>
-          <p>作業完了後、現金または銀行振込にてお支払いをお願いしております。</p>
+          <div class="flow__num">4</div>
+          <div class="flow__icon">😊</div>
+          <h3>お支払い<br />（作業後）</h3>
+          <p>作業が終わってから、現金または銀行振込でOK。</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section id="price" class="section price">
+  <!-- 大きな電話CTA -->
+  <section class="big-cta">
     <div class="container">
-      <header class="section__head">
-        <p class="section__eyebrow">PRICE</p>
-        <h2 class="section__title">料金の目安</h2>
-        <p class="section__desc">ご依頼内容により料金は異なります。詳細はお気軽にお見積もりをご依頼ください。</p>
-      </header>
-      <div class="price__table">
-        <div class="price__row price__row--head">
-          <div>サービス</div><div>料金目安</div>
-        </div>
-        <div class="price__row"><div>基本料金（1時間あたり）</div><div>3,300円〜</div></div>
-        <div class="price__row"><div>お部屋清掃</div><div>5,500円〜</div></div>
-        <div class="price__row"><div>犬の散歩（1回）</div><div>1,500円〜</div></div>
-        <div class="price__row"><div>除雪作業</div><div>5,500円〜</div></div>
-        <div class="price__row"><div>特殊清掃</div><div>要お見積もり</div></div>
-        <div class="price__row"><div>不用品回収</div><div>3,300円〜＋処分費</div></div>
-      </div>
-      <p class="price__note">※ 表示はすべて税込価格です。出張費・処分費等が別途かかる場合がございます。</p>
+      <p class="big-cta__lead">まずは<strong>お電話</strong>ください！</p>
+      <a href="tel:0123259947" class="big-cta__phone">
+        <span class="big-cta__phone-icon">📞</span>
+        <span class="big-cta__phone-num">0123-25-9947</span>
+      </a>
+      <p class="big-cta__hours">受付　朝8時 〜 夜8時（年中無休）</p>
+      <p class="big-cta__sub">「これ、お願いできるかな？」のご相談だけでもOKです！</p>
     </div>
   </section>
 
+  <!-- よくある質問 -->
   <section id="faq" class="section faq">
     <div class="container">
       <header class="section__head">
-        <p class="section__eyebrow">FAQ</p>
-        <h2 class="section__title">よくあるご質問</h2>
+        <p class="section__eyebrow">よくあるご質問</p>
+        <h2 class="section__title">
+          <span class="section__title-emoji">❓</span>
+          よくいただくご質問
+        </h2>
       </header>
+
       <div class="faq__list">
         <details class="faq__item">
           <summary>対応エリアはどこですか？</summary>
           <p>地域内を中心に、近隣地域も対応可能です。エリア外の場合もまずはご相談ください。</p>
         </details>
         <details class="faq__item">
-          <summary>見積もりは無料ですか？</summary>
-          <p>はい、お見積もりは完全無料です。お見積もり後のキャンセルも可能です。</p>
+          <summary>見積もりは本当に無料ですか？</summary>
+          <p>はい、完全無料です。お見積もりの後でキャンセルされても料金はかかりません。</p>
         </details>
         <details class="faq__item">
-          <summary>当日・即日の依頼もできますか？</summary>
+          <summary>今日すぐに来てもらえますか？</summary>
           <p>スケジュールが空いていれば即日対応も可能です。お急ぎの場合はお電話でご連絡ください。</p>
         </details>
         <details class="faq__item">
-          <summary>女性スタッフはいますか？</summary>
-          <p>ご要望に応じて手配可能です。お気軽にお申し付けください。</p>
+          <summary>女性のスタッフはいますか？</summary>
+          <p>ご要望に応じて手配いたします。お気軽にお申し付けください。</p>
         </details>
         <details class="faq__item">
           <summary>支払い方法は何がありますか？</summary>
@@ -203,108 +547,107 @@
         </details>
         <details class="faq__item">
           <summary>近所に知られたくないのですが…</summary>
-          <p>無地の車両でお伺いするなど、ご事情に応じて配慮いたします。秘密厳守でご対応いたします。</p>
+          <p>無地のお車でお伺いするなど、ご事情に応じて配慮いたします。秘密厳守でご対応します。</p>
         </details>
       </div>
     </div>
   </section>
 
+  <!-- お問い合わせ -->
   <section id="contact" class="section contact">
     <div class="container">
       <header class="section__head">
-        <p class="section__eyebrow">CONTACT</p>
-        <h2 class="section__title">お問い合わせ・ご依頼</h2>
-        <p class="section__desc">下記フォームよりお気軽にご相談ください。お電話・LINEでも受け付けております。</p>
+        <p class="section__eyebrow">お問い合わせ</p>
+        <h2 class="section__title">
+          <span class="section__title-emoji">✉️</span>
+          メールでのご相談
+        </h2>
+        <p class="section__desc">お電話が難しい方は、こちらのフォームからどうぞ。</p>
       </header>
 
-      <div class="contact__grid">
-        <div class="contact__info">
-          <div class="contact__info-block">
-            <p class="contact__label">お電話</p>
-            <a href="tel:0000000000" class="contact__phone">000-0000-0000</a>
-            <p class="contact__hours">受付：8:00 - 20:00（年中無休）</p>
-          </div>
-          <div class="contact__info-block">
-            <p class="contact__label">メール</p>
-            <a href="mailto:info@example.com">info@example.com</a>
-          </div>
-          <div class="contact__info-block">
-            <p class="contact__label">所在地</p>
-            <p>〒000-0000<br />（住所をご記入ください）</p>
-          </div>
+      <form class="contact__form" id="contactForm" novalidate>
+        <div class="form__row">
+          <label for="name">お名前 <span class="form__req">必須</span></label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="例：山田 太郎" />
         </div>
 
-        <form class="contact__form" id="contactForm" novalidate>
-          <div class="form__row">
-            <label for="name">お名前 <span class="form__req">必須</span></label>
-            <input type="text" id="name" name="name" required autocomplete="name" />
-          </div>
+        <div class="form__row">
+          <label for="tel">お電話番号</label>
+          <input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="例：090-1234-5678" />
+        </div>
 
-          <div class="form__row form__row--split">
-            <div>
-              <label for="tel">お電話番号</label>
-              <input type="tel" id="tel" name="tel" autocomplete="tel" />
-            </div>
-            <div>
-              <label for="email">メールアドレス <span class="form__req">必須</span></label>
-              <input type="email" id="email" name="email" required autocomplete="email" />
-            </div>
-          </div>
+        <div class="form__row">
+          <label for="email">メールアドレス <span class="form__req">必須</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="例：example@email.com" />
+        </div>
 
-          <div class="form__row">
-            <label for="service">ご依頼内容 <span class="form__req">必須</span></label>
-            <select id="service" name="service" required>
-              <option value="">選択してください</option>
-              <option>お部屋・水まわり清掃</option>
-              <option>犬の散歩・ペットのお世話</option>
-              <option>除雪・雪下ろし</option>
-              <option>特殊清掃・遺品整理</option>
-              <option>不用品回収・粗大ごみ処分</option>
-              <option>家具組立・修繕</option>
-              <option>草刈り・庭木の手入れ</option>
-              <option>買い物代行・付き添い</option>
-              <option>その他</option>
-            </select>
-          </div>
+        <div class="form__row">
+          <label for="service">どんなご依頼ですか？ <span class="form__req">必須</span></label>
+          <select id="service" name="service" required>
+            <option value="">選んでください</option>
+            <option>お掃除・片付けサービス</option>
+            <option>不用品・粗大ゴミの片付け</option>
+            <option>ゴミ屋敷の片付け</option>
+            <option>格安引越しのお手伝い</option>
+            <option>お話し相手</option>
+            <option>買物代行</option>
+            <option>家電の設置・取り付け</option>
+            <option>害虫駆除</option>
+            <option>遺品整理・お焚き上げ</option>
+            <option>除雪・雪かき・屋根の雪下ろし</option>
+            <option>代理出席</option>
+            <option>パソコンサポート</option>
+            <option>ホームページ制作</option>
+            <option>集客コンサルティング</option>
+            <option>就職・恋愛・離婚相談</option>
+            <option>リサイクル出張買取</option>
+            <option>雨漏り修理</option>
+            <option>お墓掃除・お墓参り代行</option>
+            <option>その他</option>
+          </select>
+        </div>
 
-          <div class="form__row">
-            <label for="date">ご希望日時</label>
-            <input type="text" id="date" name="date" placeholder="例：5月10日 午後、なるべく早く 等" />
-          </div>
+        <div class="form__row">
+          <label for="date">ご希望の日にち</label>
+          <input type="text" id="date" name="date" placeholder="例：今週中、なるべく早く 等" />
+        </div>
 
-          <div class="form__row">
-            <label for="message">詳細・ご要望 <span class="form__req">必須</span></label>
-            <textarea id="message" name="message" rows="6" required placeholder="ご依頼の内容、場所、ご状況などをご記入ください。"></textarea>
-          </div>
+        <div class="form__row">
+          <label for="message">くわしい内容 <span class="form__req">必須</span></label>
+          <textarea id="message" name="message" rows="6" required placeholder="ご依頼の内容や、おうちの場所などを書いてください。"></textarea>
+        </div>
 
-          <div class="form__row form__row--check">
-            <label class="form__check">
-              <input type="checkbox" id="agree" required />
-              <span>個人情報の取り扱いに同意します</span>
-            </label>
-          </div>
+        <div class="form__row form__row--check">
+          <label class="form__check">
+            <input type="checkbox" id="agree" required />
+            <span>個人情報の取り扱いに同意します</span>
+          </label>
+        </div>
 
-          <button type="submit" class="btn btn--primary btn--block">この内容で送信する</button>
-          <p class="form__note">※ 送信後、担当者より2営業日以内にご連絡いたします。</p>
-        </form>
-      </div>
+        <button type="submit" class="btn btn--submit">
+          <span>📨</span>この内容で送る
+        </button>
+        <p class="form__note">送信後、2日以内にご連絡いたします。</p>
+      </form>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__brand">
-      <p class="footer__logo">便利屋 百武</p>
-      <p class="footer__tag">暮らしの困りごと、まるごとお任せください。</p>
+  <div class="container">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <p class="footer__logo">便利屋ひまわり隊</p>
+        <p class="footer__tag">その他、何でもお受けします</p>
+      </div>
+      <div class="footer__contact">
+        <p class="footer__phone">📞 0123-25-9947</p>
+        <p>受付　朝8時 〜 夜8時（年中無休）</p>
+      </div>
     </div>
-    <div class="footer__meta">
-      <p>📞 000-0000-0000</p>
-      <p>受付 8:00 - 20:00（年中無休）</p>
-    </div>
+    <p class="footer__copy">© 便利屋ひまわり隊 All Rights Reserved.</p>
   </div>
-  <p class="footer__copy">© 便利屋 百武 All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
