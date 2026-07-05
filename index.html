@@ -68,6 +68,23 @@
       <rect x="16" y="30" width="78" height="16" rx="8"/>
     </g>
     <path id="sparkle-shape" d="M12 0 L15 9 L24 12 L15 15 L12 24 L9 15 L0 12 L9 9 Z"/>
+    <g id="bee">
+      <ellipse cx="-6" cy="-13" rx="8" ry="6" fill="#D6ECF7"/>
+      <ellipse cx="7" cy="-14" rx="7" ry="5.5" fill="#E8F5FB"/>
+      <ellipse cx="0" cy="0" rx="16" ry="12" fill="#FFD34D"/>
+      <path d="M-9,-9.5 Q-12,0 -9,9.5 L-3,11.5 Q-6,0 -3,-11.5 Z" fill="#3F2D10"/>
+      <path d="M1,-12 Q-2,0 1,12 L7,10 Q4,0 7,-10 Z" fill="#3F2D10"/>
+      <circle cx="11" cy="-3" r="1.8" fill="#3F2D10"/>
+      <path d="M10,3 Q12,5 14,3" stroke="#3F2D10" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="butterfly">
+      <path d="M-2,-3 C-18,-16 -26,2 -4,5 Z" fill="#F5A9B4"/>
+      <path d="M2,-3 C18,-16 26,2 4,5 Z" fill="#9CCAE8"/>
+      <path d="M-3,4 C-16,12 -7,19 -2,8 Z" fill="#F7BE6D"/>
+      <path d="M3,4 C16,12 7,19 2,8 Z" fill="#F7BE6D"/>
+      <ellipse cx="0" cy="2" rx="2.5" ry="9" fill="#5A4632"/>
+      <path d="M-1,-6 Q-4,-12 -7,-13 M1,-6 Q4,-12 7,-13" stroke="#5A4632" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    </g>
   </defs>
 </svg>
 
@@ -113,6 +130,8 @@
       <svg class="deco-sparkle deco-sparkle--2" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#F2A516"/></svg>
       <svg class="deco-sparkle deco-sparkle--3" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#E58E7A"/></svg>
       <svg class="deco-sparkle deco-sparkle--4" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#9CCAE8"/></svg>
+      <svg class="deco-bee" viewBox="-30 -30 60 60" focusable="false"><use href="#bee"/></svg>
+      <svg class="deco-butterfly" viewBox="-30 -30 60 60" focusable="false"><use href="#butterfly"/></svg>
     </div>
 
     <div class="container hero__inner">
@@ -180,6 +199,11 @@
 
   <!-- お困りごと -->
   <section id="problems" class="section problems">
+    <div class="problems__deco" aria-hidden="true">
+      <svg class="deco-cloud problems__cloud1" viewBox="0 0 110 50" focusable="false"><use href="#cloud-shape"/></svg>
+      <svg class="deco-sparkle problems__sp1" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#F2A516"/></svg>
+      <svg class="deco-sparkle problems__sp2" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#9CCAE8"/></svg>
+    </div>
     <div class="container">
       <header class="section__head">
         <h2 class="section__title">
@@ -226,6 +250,7 @@
 
   <!-- できること -->
   <section id="services" class="section services">
+    <svg class="section-flower section-flower--services" viewBox="0 0 220 220" aria-hidden="true" focusable="false"><use href="#sunflower" transform="translate(110 110)"/></svg>
     <div class="container">
       <header class="section__head">
         <p class="section__eyebrow">できること</p>
@@ -495,6 +520,7 @@
 
   <!-- ご依頼の流れ -->
   <section id="flow" class="section flow">
+    <svg class="section-flower section-flower--flow" viewBox="0 0 220 220" aria-hidden="true" focusable="false"><use href="#sunflower" transform="translate(110 110)"/></svg>
     <div class="container">
       <header class="section__head">
         <p class="section__eyebrow">ご依頼の流れ</p>
@@ -601,6 +627,7 @@
 
   <!-- お問い合わせ -->
   <section id="contact" class="section contact">
+    <svg class="section-flower section-flower--contact" viewBox="0 0 220 220" aria-hidden="true" focusable="false"><use href="#sunflower-face" transform="translate(110 110)"/></svg>
     <div class="container">
       <header class="section__head">
         <p class="section__eyebrow">お問い合わせ</p>
@@ -692,6 +719,8 @@
     <g transform="translate(720,58)"><line x1="0" y1="10" x2="0" y2="62" stroke="#40632F" stroke-width="7" stroke-linecap="round"/><use href="#sunflower-face" transform="scale(0.36)"/></g>
     <g transform="translate(1040,84)"><line x1="0" y1="8" x2="0" y2="42" stroke="#40632F" stroke-width="5" stroke-linecap="round"/><use href="#sunflower" transform="scale(0.21)"/></g>
     <g transform="translate(1290,66)"><line x1="0" y1="8" x2="0" y2="50" stroke="#40632F" stroke-width="6" stroke-linecap="round"/><use href="#sunflower" transform="scale(0.25)"/></g>
+    <g transform="translate(545,62) scale(1.1) rotate(-8)"><use href="#butterfly"/></g>
+    <g transform="translate(945,50) rotate(10)"><use href="#bee"/></g>
   </svg>
 </div>
 
