@@ -18,6 +18,47 @@
   });
 })();
 
+// ============ スクロール時のヘッダー ============
+(function () {
+  const header = document.getElementById('siteHeader');
+  if (!header) return;
+  const onScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+// ============ スクロール表示アニメーション ============
+(function () {
+  const targets = document.querySelectorAll(
+    '.section__head, .bubble, .problems__answer, .service-card, .price__big, .price__table, .flow__item, .faq__item, .contact__form'
+  );
+  if (!targets.length) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || !('IntersectionObserver' in window)) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  targets.forEach((el, i) => {
+    el.classList.add('reveal');
+    // 並んだカードは少しずつ遅らせて表示
+    el.style.transitionDelay = `${(i % 3) * 70}ms`;
+    observer.observe(el);
+  });
+})();
+
 // ============ お問い合わせフォーム ============
 (function () {
   const form = document.getElementById('contactForm');
@@ -75,19 +116,4 @@
     form.style.display = 'none';
     success.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
-})();
-
-// ============ スクロール時のヘッダー影 ============
-(function () {
-  const header = document.querySelector('.header');
-  if (!header) return;
-  const onScroll = () => {
-    if (window.scrollY > 8) {
-      header.style.boxShadow = '0 2px 12px rgba(20, 37, 64, 0.08)';
-    } else {
-      header.style.boxShadow = 'none';
-    }
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 })();
