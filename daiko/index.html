@@ -8,7 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="lp.css?v=5" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" rel="stylesheet" />
+<link rel="stylesheet" href="lp.css?v=6" />
 </head>
 <body>
 
@@ -25,13 +26,13 @@
 <main class="col">
 
   <!-- ヒーロー -->
-  <section class="sec sec--plain">
+  <section class="sec sec--plain sec--hero">
     <figure class="hero__photo" id="heroSlides">
       <img src="../assets/slides/josetsu-1.jpg" alt="えぞ助の店舗前で除雪作業をするホイールローダー" class="is-active" />
-      <img src="../assets/slides/josetsu-2.jpg" alt="駐車場の除雪作業の様子" loading="lazy" />
+      <img src="../assets/photos/snow-compact.jpg" alt="住宅街で除雪する小型ホイールローダー" loading="lazy" />
+      <img src="../assets/photos/snow-finish.jpg" alt="建物入口まわりを除雪機で仕上げるスタッフ" loading="lazy" />
+      <img src="../assets/photos/snow-commercial.jpg" alt="夕暮れの駐車場を除雪するホイールローダー" loading="lazy" />
       <img src="../assets/slides/josetsu-3.jpg" alt="除雪機での雪かき作業" loading="lazy" />
-      <img src="../assets/slides/josetsu-4.jpg" alt="大型除雪受付中のホイールローダー" loading="lazy" />
-      <img src="../assets/slides/josetsu-5.jpg" alt="小型ローダーによる住宅前の除雪" loading="lazy" />
     </figure>
     <div class="hero__lead">
       <p class="pill-label">暮らしの代行なら</p>
@@ -46,7 +47,7 @@
 
   <!-- お困りごと -->
   <section class="sec sec--cream">
-    <h2 class="band__title">こんなお困りごと、<span class="nw">ありませんか？</span></h2>
+    <h2 class="sec-title">こんなお困りごと、<span class="nw">ありませんか？</span></h2>
     <div class="bubble-grid">
       <div class="bubble">電球が切れたけど、高くて届かない…</div>
       <div class="bubble">草刈や外まわりをまとめて相談したい…</div>
@@ -64,122 +65,134 @@
     <div class="branch">
       <div class="branch__col">
         <a class="branch__card" href="#sagyou">
-          <svg class="branch__icon" aria-hidden="true"><use href="icons.svg#i-sagyou"></use></svg>
-          <span class="branch__name">作業はプロに<br />まかせたい</span>
+          <img class="branch__photo" src="../assets/photos/snow-finish.jpg" alt="除雪機で作業するスタッフ" loading="lazy" />
+          <span class="branch__name">作業はプロにまかせたい</span>
           <span class="branch__desc">片付け・除雪・草刈・修理など</span>
         </a>
         <span class="branch__arrow" aria-hidden="true"></span>
-        <span class="branch__pill branch__pill--rose">作業おまかせ</span>
+        <a class="branch__pill branch__pill--rose" href="#sagyou">作業おまかせ</a>
       </div>
       <div class="branch__col">
         <a class="branch__card" href="#kurashi">
-          <svg class="branch__icon" aria-hidden="true"><use href="icons.svg#i-kurashi"></use></svg>
-          <span class="branch__name">暮らしの用事を<br />手伝ってほしい</span>
+          <img class="branch__photo" src="../assets/photos/senior-support.jpg" alt="笑顔のシニアの方と訪問スタッフ" loading="lazy" />
+          <span class="branch__name">暮らしの用事を手伝ってほしい</span>
           <span class="branch__desc">買い物・お話し相手・パソコンなど</span>
         </a>
         <span class="branch__arrow branch__arrow--orange" aria-hidden="true"></span>
-        <span class="branch__pill branch__pill--orange">暮らしおてつだい</span>
+        <a class="branch__pill branch__pill--orange" href="#kurashi">暮らしおてつだい</a>
       </div>
     </div>
     <div class="maigo">
       <p class="maigo__q">どっちか迷ったら…</p>
       <span class="branch__arrow" aria-hidden="true"></span>
-      <a class="maigo__tel" href="tel:0123259947">まずはお電話でご相談　0123-25-9947</a>
+      <a class="maigo__tel" href="tel:0123259947"><span class="ms" aria-hidden="true">call</span>まずはお電話でご相談　0123-25-9947</a>
     </div>
   </section>
 
   <!-- 作業おまかせ -->
   <section class="sec sec--pink" id="sagyou">
-    <p class="sec-eyebrow">プロの作業でこだわりの仕上がり</p>
-    <h2 class="sec-title">作業おまかせ<span class="nw">サービス</span></h2>
-    <p class="band__lead">重たい・高い・大変な作業は、プロが代わりに行います。まずは状況をお聞かせください。</p>
-    <div class="photo-row">
-      <figure class="photo">
-        <img src="../assets/slides/josetsu-4.jpg" alt="大型除雪受付中のホイールローダー" loading="lazy" />
-        <figcaption>大型除雪も受付中</figcaption>
+    <div class="split">
+      <figure class="split__photo">
+        <img src="../assets/photos/snow-compact.jpg" alt="住宅街で除雪する小型ホイールローダー" loading="lazy" />
       </figure>
-      <figure class="photo">
-        <img src="../assets/slides/josetsu-2.jpg" alt="駐車場の除雪作業" loading="lazy" />
-        <figcaption>駐車場・店舗前もおまかせ</figcaption>
-      </figure>
+      <div class="split__text">
+        <p class="sec-eyebrow">プロの作業でこだわりの仕上がり</p>
+        <h2 class="sec-title">作業おまかせ<span class="nw">サービス</span></h2>
+        <p class="split__lead">重たい・高い・大変な作業は、プロが代わりに行います。まずは状況をお聞かせください。</p>
+        <ul class="check">
+          <li>片付け・不用品・引越しのお手伝い</li>
+          <li>除雪・草刈・雨漏りなど外まわり</li>
+          <li>家電の設置や電球交換などの小さな作業</li>
+        </ul>
+      </div>
     </div>
-    <div class="svc-grid">
-      <article class="svc">
-        <h3>お掃除・片付けサービス</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-souji"></use></svg>
+
+    <div class="menu">
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">cleaning_services</span>
+        <div class="item__text">
+          <h3>お掃除・片付けサービス</h3>
           <p>お部屋・キッチン・水まわりなど、暮らしの中の片付けをお手伝いします。</p>
           <p class="tags">日常のお掃除／片付け／水まわり</p>
         </div>
       </article>
-      <article class="svc">
-        <h3>不用品・粗大ゴミの片付け</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-fuyouhin"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">chair</span>
+        <div class="item__text">
+          <h3>不用品・粗大ゴミの片付け</h3>
           <p>大きな家具や粗大ゴミなど、自分では動かしにくい物の片付けをお手伝いします。</p>
           <p class="tags">粗大ゴミ／不用品／搬出補助</p>
         </div>
       </article>
-      <article class="svc">
-        <h3>ゴミ屋敷の片付け</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-gomi"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">inventory_2</span>
+        <div class="item__text">
+          <h3>ゴミ屋敷の片付け</h3>
           <p>大量の荷物や生活ゴミで手をつけにくいお部屋も、まずはご相談ください。</p>
           <p class="tags">室内片付け／仕分け／秘密厳守</p>
         </div>
       </article>
-      <article class="svc">
-        <h3>格安引越しのお手伝い</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-hikkoshi"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">local_shipping</span>
+        <div class="item__text">
+          <h3>格安引越しのお手伝い</h3>
           <p>荷物運びやちょっとした引越し作業を、必要な分だけお手伝いします。</p>
           <p class="tags">荷物運び／搬入搬出／小規模引越し</p>
         </div>
       </article>
-      <article class="svc">
-        <h3>家電の設置・取り付け</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-kaden"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">electrical_services</span>
+        <div class="item__text">
+          <h3>家電の設置・取り付け</h3>
           <p>家電の設置や取り付けなど、少し人手がほしい作業をご相談ください。</p>
           <p class="tags">設置補助／取り付け／電球交換</p>
         </div>
       </article>
-      <article class="svc">
-        <h3>草刈</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-kusakari"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">grass</span>
+        <div class="item__text">
+          <h3>草刈</h3>
           <p>伸びた草や外まわりのお困りごとも、状況をお聞きして対応します。</p>
           <p class="tags">草刈／現地確認／ご相談</p>
         </div>
       </article>
-      <article class="svc">
-        <h3>除雪・雪かき・屋根の雪下ろし</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-josetsu"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">ac_unit</span>
+        <div class="item__text">
+          <h3>除雪・雪かき・屋根の雪下ろし</h3>
           <p>玄関前や駐車場、屋根の雪下ろしまで冬のお困りごとをお受けします。</p>
           <p class="tags">除雪／雪かき／屋根の雪下ろし</p>
         </div>
       </article>
-      <article class="svc">
-        <h3>遺品整理・お焚き上げ</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-ihin"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">local_florist</span>
+        <div class="item__text">
+          <h3>遺品整理・お焚き上げ</h3>
           <p>大切なお品を丁寧に扱い、心を込めて整理のお手伝いをします。</p>
           <p class="tags">遺品整理／お焚き上げ／秘密厳守</p>
         </div>
       </article>
-      <article class="svc">
-        <h3>雨漏り修理</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-amamori"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">roofing</span>
+        <div class="item__text">
+          <h3>雨漏り修理</h3>
           <p>雨漏りが気になる時は、状況確認からお気軽にご相談ください。</p>
           <p class="tags">雨漏り／修理相談／現地確認</p>
         </div>
       </article>
     </div>
+
+    <!-- 季節の写真 -->
+    <h3 class="season-title"><span>今の季節は</span>除雪のご依頼が増えています</h3>
+    <div class="gallery">
+      <figure><img src="../assets/photos/snow-finish.jpg" alt="建物入口まわりの除雪" loading="lazy" /><figcaption>玄関・通路まわりの仕上げ</figcaption></figure>
+      <figure><img src="../assets/photos/snow-commercial.jpg" alt="駐車場の除雪" loading="lazy" /><figcaption>駐車場・店舗前の除雪</figcaption></figure>
+      <figure><img src="../assets/slides/josetsu-3.jpg" alt="除雪機での雪かき" loading="lazy" /><figcaption>雪に埋まった車まわりも対応</figcaption></figure>
+    </div>
+
     <p class="free-combo">その他のご依頼も、<u>自由に組み合わせ</u>できます</p>
 
-    <!-- 料金プラン（本家型） -->
+    <!-- 料金プラン -->
     <div class="plan-area">
       <div class="plan">
         <p class="plan__label">基本料金</p>
@@ -240,84 +253,91 @@
 
   <!-- 暮らしおてつだい -->
   <section class="sec sec--orange" id="kurashi">
-    <p class="sec-eyebrow">外出しづらい時も、話し相手がほしい時も</p>
-    <h2 class="sec-title sec-title--orange">暮らしおてつだい<span class="nw">サービス</span></h2>
-    <p class="band__lead">暮らしの「代わりにやってほしい」と「誰かに聞きたい」を、まとめてお受けします。</p>
-    <div class="photo-row">
-      <figure class="photo photo--wide">
-        <img src="../assets/senior-phone.jpg" alt="電話で相談するシニアの方" loading="lazy" />
-        <figcaption>お電話一本でかけつけます</figcaption>
+    <div class="split split--rev">
+      <figure class="split__photo">
+        <img src="../assets/photos/senior-support.jpg" alt="笑顔のシニアの方と訪問スタッフ" loading="lazy" />
       </figure>
+      <div class="split__text">
+        <p class="sec-eyebrow sec-eyebrow--orange">外出しづらい時も、話し相手がほしい時も</p>
+        <h2 class="sec-title sec-title--orange">暮らしおてつだい<span class="nw">サービス</span></h2>
+        <p class="split__lead">暮らしの「代わりにやってほしい」と「誰かに聞きたい」を、まとめてお受けします。</p>
+        <ul class="check check--orange">
+          <li>買い物・お墓参りなどの代行</li>
+          <li>お話し相手や各種のご相談</li>
+          <li>パソコン・ホームページ・集客のサポート</li>
+        </ul>
+      </div>
     </div>
-    <div class="svc-grid">
-      <article class="svc svc--orange">
-        <h3>買物代行</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-kaimono"></use></svg>
+
+    <div class="menu menu--orange">
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">shopping_cart</span>
+        <div class="item__text">
+          <h3>買物代行</h3>
           <p>日用品や食料品など、外出が難しい時のお買い物を代行します。</p>
           <p class="tags">日用品／食料品／近隣のおつかい</p>
         </div>
       </article>
-      <article class="svc svc--orange">
-        <h3>お墓掃除・お墓参り代行</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-ohaka"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">temple_buddhist</span>
+        <div class="item__text">
+          <h3>お墓掃除・お墓参り代行</h3>
           <p>遠方や多忙で行けない時のお墓掃除・お墓参りを代行します。</p>
           <p class="tags">お墓掃除／お墓参り代行／ご報告</p>
         </div>
       </article>
-      <article class="svc svc--orange">
-        <h3>お話し相手</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-hanashi"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">forum</span>
+        <div class="item__text">
+          <h3>お話し相手</h3>
           <p>ひとりで過ごす時間が長い方の、ちょっとしたお話し相手になります。</p>
           <p class="tags">見守り／雑談／ご家族の安心</p>
         </div>
       </article>
-      <article class="svc svc--orange">
-        <h3>代理出席</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-dairi"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">assignment_ind</span>
+        <div class="item__text">
+          <h3>代理出席</h3>
           <p>事情があって出席が難しい場面の代理対応もご相談ください。</p>
           <p class="tags">代理対応／事前相談／柔軟対応</p>
         </div>
       </article>
-      <article class="svc svc--orange">
-        <h3>就職・恋愛・離婚相談</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-soudan"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">favorite</span>
+        <div class="item__text">
+          <h3>就職・恋愛・離婚相談</h3>
           <p>人に話しづらい相談も、まずはお気軽にお話しください。</p>
           <p class="tags">就職相談／恋愛相談／離婚相談</p>
         </div>
       </article>
-      <article class="svc svc--orange">
-        <h3>リサイクル出張買取</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-kaitori"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">sell</span>
+        <div class="item__text">
+          <h3>リサイクル出張買取</h3>
           <p>使わなくなった品物の出張買取についてもご相談いただけます。</p>
           <p class="tags">出張買取／査定相談／リサイクル</p>
         </div>
       </article>
-      <article class="svc svc--orange">
-        <h3>パソコンサポート</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-pc"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">computer</span>
+        <div class="item__text">
+          <h3>パソコンサポート</h3>
           <p>設定や操作で困った時、身近な相談相手としてサポートします。</p>
           <p class="tags">初期設定／操作相談／トラブル相談</p>
         </div>
       </article>
-      <article class="svc svc--orange">
-        <h3>ホームページ制作</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-hp"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">web</span>
+        <div class="item__text">
+          <h3>ホームページ制作</h3>
           <p>お店やサービスのホームページ制作もお受けしています。</p>
           <p class="tags">制作相談／更新／公開サポート</p>
         </div>
       </article>
-      <article class="svc svc--orange">
-        <h3>集客コンサルティング</h3>
-        <div class="svc__body">
-          <svg class="svc__icon" aria-hidden="true"><use href="icons.svg#i-shukyaku"></use></svg>
+      <article class="item">
+        <span class="ms item__icon" aria-hidden="true">trending_up</span>
+        <div class="item__text">
+          <h3>集客コンサルティング</h3>
           <p>集客や販促の相談など、事業まわりのお困りごともお受けします。</p>
           <p class="tags">集客相談／販促／改善提案</p>
         </div>
@@ -359,28 +379,28 @@
     <div class="flow">
       <div class="fstep">
         <span class="fstep__num">1</span>
-        <svg class="fstep__icon" aria-hidden="true"><use href="icons.svg#i-tel"></use></svg>
+        <span class="ms fstep__icon" aria-hidden="true">call</span>
         <h3>お電話でご相談</h3>
         <p>「○○ができますか？」のご相談だけでもOKです。</p>
       </div>
       <span class="farrow" aria-hidden="true"></span>
       <div class="fstep">
         <span class="fstep__num">2</span>
-        <svg class="fstep__icon" aria-hidden="true"><use href="icons.svg#i-mitsumori"></use></svg>
+        <span class="ms fstep__icon" aria-hidden="true">request_quote</span>
         <h3>お見積もり（無料）</h3>
         <p>ご依頼内容をお伺いし、料金をお伝えします。</p>
       </div>
       <span class="farrow" aria-hidden="true"></span>
       <div class="fstep">
         <span class="fstep__num">3</span>
-        <svg class="fstep__icon" aria-hidden="true"><use href="icons.svg#i-work"></use></svg>
+        <span class="ms fstep__icon" aria-hidden="true">home_repair_service</span>
         <h3>お伺いして作業</h3>
         <p>ご都合のよい日時にお伺いし、丁寧に作業します。</p>
       </div>
       <span class="farrow" aria-hidden="true"></span>
       <div class="fstep">
         <span class="fstep__num">4</span>
-        <svg class="fstep__icon" aria-hidden="true"><use href="icons.svg#i-pay"></use></svg>
+        <span class="ms fstep__icon" aria-hidden="true">payments</span>
         <h3>お支払い（作業後）</h3>
         <p>作業が終わってから、現金または銀行振込でOK。</p>
       </div>
@@ -424,7 +444,7 @@
     <h2 class="cta__title">まずは無料相談・<span class="nw">お見積もりへ</span></h2>
     <div class="cta__card">
       <p class="cta__lead">電話で無料相談・お見積もりはこちら</p>
-      <a class="cta__tel" href="tel:0123259947"><svg class="cta__telicon" aria-hidden="true"><use href="icons.svg#i-tel"></use></svg>0123-25-9947</a>
+      <a class="cta__tel" href="tel:0123259947"><span class="ms cta__telicon" aria-hidden="true">call</span>0123-25-9947</a>
       <p class="cta__hours">受付 朝8時〜夜8時（年中無休）</p>
       <p class="cta__note">「こんなこと頼めるかな？」のご相談だけでも、お気軽にどうぞ。</p>
     </div>
