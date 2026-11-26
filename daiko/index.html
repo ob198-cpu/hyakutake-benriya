@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" rel="stylesheet" />
-<link rel="stylesheet" href="lp.css?v=10" />
+<link rel="stylesheet" href="lp.css?v=11" />
 </head>
 <body>
 
@@ -22,6 +22,17 @@
     <span class="top__brand">NORTH CLUB株式会社</span>
   </div>
 </header>
+
+<nav class="jump" id="jumpNav" aria-label="ページ内メニュー">
+  <div class="jump__inner">
+    <a href="#sagyou">作業おまかせ</a>
+    <a href="#kurashi">暮らしおてつだい</a>
+    <a href="#price">料金</a>
+    <a href="#flow">ご依頼の流れ</a>
+    <a href="#faq">よくある質問</a>
+    <a class="jump__tel" href="#tel">電話で相談</a>
+  </div>
+</nav>
 
 <main class="col">
 
@@ -36,7 +47,7 @@
     </figure>
     <div class="hero__lead">
       <p class="pill-label">暮らしの代行なら</p>
-      <h1 class="hero__title"><span class="nw">プロの代行サービス</span> <strong>えぞ助</strong>に<span class="nw">おまかせ！</span></h1>
+      <h1 class="hero__title"><span class="nw">プロの代行サービス</span> <span class="nw"><strong>えぞ助</strong>におまかせ！</span></h1>
       <div class="promise-row">
         <span class="promise">見積もり無料</span>
         <span class="promise">全18種に対応</span>
@@ -47,17 +58,17 @@
 
   <!-- お困りごと -->
   <section class="sec sec--cream">
-    <h2 class="sec-title">こんな<span class="hl">お困りごと</span>、<span class="nw">ありませんか？</span></h2>
+    <h2 class="sec-title"><span class="nw">こんな<span class="hl">お困りごと</span>、</span><span class="nw">ありませんか？</span></h2>
     <ul class="worry">
-      <li><span class="ms" aria-hidden="true">check_circle</span>電球が切れたけど、高くて届かない…</li>
-      <li><span class="ms" aria-hidden="true">check_circle</span>草刈や外まわりをまとめて相談したい…</li>
-      <li><span class="ms" aria-hidden="true">check_circle</span>大きなゴミを運び出せない…</li>
-      <li><span class="ms" aria-hidden="true">check_circle</span>買い物に行くのが大変…</li>
-      <li><span class="ms" aria-hidden="true">check_circle</span>雪かきが追いつかない…</li>
-      <li><span class="ms" aria-hidden="true">check_circle</span>パソコンや集客のことを誰かに聞きたい…</li>
+      <li><span class="ms" aria-hidden="true">check_circle</span><span><span class="nw">電球が切れたけど、</span><span class="nw">高くて届かない…</span></span></li>
+      <li><span class="ms" aria-hidden="true">check_circle</span><span><span class="nw">草刈や外まわりを</span><span class="nw">まとめて相談したい…</span></span></li>
+      <li><span class="ms" aria-hidden="true">check_circle</span><span><span class="nw">大きなゴミを</span><span class="nw">運び出せない…</span></span></li>
+      <li><span class="ms" aria-hidden="true">check_circle</span><span><span class="nw">買い物に行くのが</span><span class="nw">大変…</span></span></li>
+      <li><span class="ms" aria-hidden="true">check_circle</span><span><span class="nw">雪かきが</span><span class="nw">追いつかない…</span></span></li>
+      <li><span class="ms" aria-hidden="true">check_circle</span><span><span class="nw">パソコンや集客のことを</span><span class="nw">誰かに聞きたい…</span></span></li>
     </ul>
     <span class="ms worry__arrow" aria-hidden="true">keyboard_double_arrow_down</span>
-    <p class="answer"><span>ぜんぶ、えぞ助が代行します！</span></p>
+    <p class="answer"><span><span class="nw">ぜんぶ、</span><span class="nw">えぞ助が代行します！</span></span></p>
   </section>
 
   <!-- 分岐フロー -->
@@ -67,7 +78,7 @@
       <div class="branch__col">
         <a class="branch__card" href="#sagyou">
           <img class="branch__photo" src="../assets/photos/snow-finish.jpg" alt="除雪機で作業するスタッフ" loading="lazy" />
-          <span class="branch__name">作業をプロにまかせたい</span>
+          <span class="branch__name"><span class="nw">作業をプロに</span><span class="nw">まかせたい</span></span>
           <span class="branch__desc">片付け・除雪・草刈・修理など</span>
         </a>
         <span class="branch__arrow" aria-hidden="true"></span>
@@ -76,7 +87,7 @@
       <div class="branch__col">
         <a class="branch__card" href="#kurashi">
           <img class="branch__photo" src="../assets/photos/senior-support.jpg" alt="笑顔のシニアの方と訪問スタッフ" loading="lazy" />
-          <span class="branch__name">暮らしの用事を手伝ってほしい</span>
+          <span class="branch__name"><span class="nw">暮らしの用事を</span><span class="nw">手伝ってほしい</span></span>
           <span class="branch__desc">買い物・お墓参り・パソコンなど</span>
         </a>
         <span class="branch__arrow branch__arrow--orange" aria-hidden="true"></span>
@@ -86,7 +97,7 @@
     <div class="maigo">
       <p class="maigo__q">どっちか迷ったら…</p>
       <span class="branch__arrow" aria-hidden="true"></span>
-      <a class="maigo__tel" href="tel:0123259947"><span class="ms" aria-hidden="true">call</span>まずはお電話でご相談　0123-25-9947</a>
+      <a class="maigo__tel" href="tel:0123259947"><span class="ms" aria-hidden="true">call</span><span class="maigo__txt"><span class="nw">まずはお電話でご相談</span> <span class="nw">0123-25-9947</span></span></a>
     </div>
   </section>
 
@@ -101,16 +112,16 @@
         <h2 class="sec-title">作業おまかせ<span class="nw">サービス</span></h2>
         <p class="split__lead">重たい・高い・大変な作業は、プロが代わりに行います。まずは状況をお聞かせください。</p>
         <ul class="check">
-          <li>片付け・不用品・引越しのお手伝い</li>
-          <li>除雪・草刈・雨漏りなど外まわり</li>
-          <li>家電の設置や電球交換などの小さな作業</li>
+          <li><span class="nw">片付け・不用品・</span><span class="nw">引越しのお手伝い</span></li>
+          <li><span class="nw">除雪・草刈・</span><span class="nw">雨漏りなど外まわり</span></li>
+          <li><span class="nw">家電の設置や電球交換</span><span class="nw">などの小さな作業</span></li>
         </ul>
       </div>
     </div>
 
     <div class="tiles">
       <figure class="tile"><img src="../assets/photos/cleaning.webp" alt="テーブルを布巾で拭き掃除するスタッフ" loading="lazy" /><figcaption>お掃除・片付け</figcaption></figure>
-      <figure class="tile"><img src="../assets/photos/moving.webp" alt="段ボール箱を玄関から運ぶ作業スタッフ" loading="lazy" /><figcaption>不用品の片付け・引越し</figcaption></figure>
+      <figure class="tile"><img src="../assets/photos/moving.webp" alt="段ボール箱を玄関から運ぶ作業スタッフ" loading="lazy" /><figcaption><span class="nw">不用品の片付け・</span><span class="nw">引越し</span></figcaption></figure>
       <figure class="tile"><img src="../assets/photos/grass-cutting.webp" alt="草刈機で住宅の庭の草を刈るスタッフ" loading="lazy" /><figcaption>草刈</figcaption></figure>
       <figure class="tile"><img src="../assets/photos/snow-removal.webp" alt="除雪機で玄関前の通路を除雪するスタッフ" loading="lazy" /><figcaption>除雪・雪かき</figcaption></figure>
     </div>
@@ -119,7 +130,7 @@
       <article class="item">
         <span class="ms item__icon" aria-hidden="true">cleaning_services</span>
         <div class="item__text">
-          <h3>お掃除・片付けサービス</h3>
+          <h3><span class="nw">お掃除・</span><span class="nw">片付けサービス</span></h3>
           <p>お部屋・キッチン・水まわりなど、暮らしの中の片付けをお手伝いします。</p>
           <p class="tags">日常のお掃除／片付け／水まわり</p>
         </div>
@@ -127,7 +138,7 @@
       <article class="item">
         <span class="ms item__icon" aria-hidden="true">chair</span>
         <div class="item__text">
-          <h3>不用品・粗大ゴミの片付け</h3>
+          <h3><span class="nw">不用品・</span><span class="nw">粗大ゴミの片付け</span></h3>
           <p>大きな家具や粗大ゴミなど、自分では動かしにくい物の片付けをお手伝いします。</p>
           <p class="tags">粗大ゴミ／不用品／搬出補助</p>
         </div>
@@ -167,7 +178,7 @@
       <article class="item">
         <span class="ms item__icon" aria-hidden="true">ac_unit</span>
         <div class="item__text">
-          <h3>除雪・雪かき・屋根の雪下ろし</h3>
+          <h3><span class="nw">除雪・雪かき・</span><span class="nw">屋根の雪下ろし</span></h3>
           <p>玄関前や駐車場、屋根の雪下ろしまで冬のお困りごとをお受けします。</p>
           <p class="tags">除雪／雪かき／屋根の雪下ろし</p>
         </div>
@@ -191,14 +202,14 @@
     </div>
 
     <!-- 季節の写真 -->
-    <h3 class="season-title"><span>今の季節は</span>除雪のご依頼が増えています</h3>
+    <h3 class="season-title"><span>今の季節は</span><b class="nw">除雪のご依頼が</b><b class="nw">増えています</b></h3>
     <div class="gallery">
       <figure><img src="../assets/photos/snow-finish.jpg" alt="建物入口まわりの除雪" loading="lazy" /><figcaption>玄関・通路まわりの仕上げ</figcaption></figure>
       <figure><img src="../assets/slides/josetsu-3.jpg" alt="除雪機での雪かき" loading="lazy" /><figcaption>雪に埋まった車まわりも対応</figcaption></figure>
       <figure><img src="../assets/slides/josetsu-4.jpg" alt="大型除雪受付中のホイールローダー" loading="lazy" /><figcaption>大型除雪も受付中</figcaption></figure>
     </div>
 
-    <p class="free-combo">その他のご依頼も、<u>自由に組み合わせ</u>できます</p>
+    <p class="free-combo"><span class="nw">その他のご依頼も、</span><span class="nw"><u>自由に組み合わせ</u>できます</span></p>
 
     <!-- 料金プラン -->
     <div class="plan-area">
@@ -243,17 +254,17 @@
     <div class="reason-list">
       <article class="reason">
         <span class="reason__num">1</span>
-        <h3><span class="mark">全18種</span>、まとめて頼める</h3>
+        <h3><span class="nw"><span class="mark">全18種</span>、</span><span class="nw">まとめて頼める</span></h3>
         <p>買い物から除雪、パソコンまで窓口はひとつ。「これも頼めるかな？」のご相談だけでも大歓迎です。</p>
       </article>
       <article class="reason">
         <span class="reason__num">2</span>
-        <h3>見積もり<span class="mark">無料</span>・お支払いは作業後</h3>
+        <h3><span class="nw">見積もり<span class="mark">無料</span>・</span><span class="nw">お支払いは作業後</span></h3>
         <p>お見積もりの後でキャンセルされても料金はかかりません。お支払いは作業が終わってから、現金または銀行振込でOKです。</p>
       </article>
       <article class="reason">
         <span class="reason__num">3</span>
-        <h3><span class="mark">秘密厳守</span>で柔軟に対応</h3>
+        <h3><span class="nw"><span class="mark">秘密厳守</span>で</span><span class="nw">柔軟に対応</span></h3>
         <p>無地のお車でお伺いするなどご事情に配慮します。即日対応や女性スタッフの手配もご相談ください。</p>
       </article>
     </div>
@@ -270,16 +281,16 @@
         <h2 class="sec-title sec-title--orange">暮らしおてつだい<span class="nw">サービス</span></h2>
         <p class="split__lead">暮らしの「代わりにやってほしい」と「誰かに聞きたい」を、まとめてお受けします。</p>
         <ul class="check check--orange">
-          <li>買い物・お墓参りなどの代行</li>
-          <li>就職・恋愛・離婚などのご相談</li>
-          <li>パソコン・ホームページ・集客のサポート</li>
+          <li><span class="nw">買い物・お墓参り</span><span class="nw">などの代行</span></li>
+          <li><span class="nw">就職・恋愛・離婚</span><span class="nw">などのご相談</span></li>
+          <li><span class="nw">パソコン・ホームページ・</span><span class="nw">集客のサポート</span></li>
         </ul>
       </div>
     </div>
 
     <div class="tiles tiles--3">
       <figure class="tile"><img src="../assets/photos/grocery-shopping.webp" alt="野菜や果物の入った買い物袋を玄関先に届ける様子" loading="lazy" /><figcaption>買物代行</figcaption></figure>
-      <figure class="tile"><img src="../assets/photos/grave-care.webp" alt="布で墓石を拭き掃除するスタッフ" loading="lazy" /><figcaption>お墓掃除・お墓参り代行</figcaption></figure>
+      <figure class="tile"><img src="../assets/photos/grave-care.webp" alt="布で墓石を拭き掃除するスタッフ" loading="lazy" /><figcaption><span class="nw">お墓掃除・</span><span class="nw">お墓参り代行</span></figcaption></figure>
       <figure class="tile"><img src="../assets/photos/computer-support.webp" alt="シニアの方にノートパソコンの操作を案内するスタッフ" loading="lazy" /><figcaption>パソコンサポート</figcaption></figure>
     </div>
 
@@ -295,7 +306,7 @@
       <article class="item">
         <span class="ms item__icon" aria-hidden="true">temple_buddhist</span>
         <div class="item__text">
-          <h3>お墓掃除・お墓参り代行</h3>
+          <h3><span class="nw">お墓掃除・</span><span class="nw">お墓参り代行</span></h3>
           <p>遠方や多忙で行けない時のお墓掃除・お墓参りを代行します。</p>
           <p class="tags">お墓掃除／お墓参り代行／ご報告</p>
         </div>
@@ -350,7 +361,7 @@
       </article>
     </div>
     <div class="svc-other">
-      <h3>その他、何でも代行します</h3>
+      <h3><span class="nw">その他、</span><span class="nw">何でも代行します</span></h3>
       <p>「これも頼めるかな…？」と思うことでも大丈夫。まずはお気軽にお電話ください。</p>
     </div>
   </section>
@@ -363,12 +374,12 @@
     <div class="price-wrap">
       <table class="price-table">
         <tr><th>サービス</th><th>料金</th></tr>
-        <tr><td>基本料金（1時間あたり）</td><td>3,300円〜</td></tr>
-        <tr><td>お掃除・片付けサービス</td><td>5,500円〜</td></tr>
-        <tr><td>不用品・粗大ゴミの片付け</td><td>お見積もり</td></tr>
-        <tr><td>除雪・雪かき・屋根の雪下ろし</td><td>5,500円〜</td></tr>
-        <tr><td>パソコンサポート・ホームページ制作</td><td>お見積もり</td></tr>
-        <tr><td>代理・相談・各種代行</td><td>お見積もり</td></tr>
+        <tr><td><span class="nw">基本料金</span><span class="nw">（1時間あたり）</span></td><td>3,300円〜</td></tr>
+        <tr><td><span class="nw">お掃除・</span><span class="nw">片付けサービス</span></td><td>5,500円〜</td></tr>
+        <tr><td><span class="nw">不用品・</span><span class="nw">粗大ゴミの片付け</span></td><td>お見積もり</td></tr>
+        <tr><td><span class="nw">除雪・雪かき・</span><span class="nw">屋根の雪下ろし</span></td><td>5,500円〜</td></tr>
+        <tr><td><span class="nw">パソコンサポート・</span><span class="nw">ホームページ制作</span></td><td>お見積もり</td></tr>
+        <tr><td><span class="nw">代理・相談・</span><span class="nw">各種代行</span></td><td>お見積もり</td></tr>
       </table>
     </div>
     <ul class="fine-print">
@@ -381,7 +392,7 @@
   <!-- 流れ（フローチャート） -->
   <section class="sec sec--gray" id="flow">
     <p class="sec-eyebrow">お申し込みの流れ</p>
-    <h2 class="sec-title">お電話からかんたん<span class="nw">4ステップ</span></h2>
+    <h2 class="sec-title"><span class="nw">お電話から</span><span class="nw">かんたん4ステップ</span></h2>
     <div class="flow">
       <div class="fstep">
         <span class="fstep__num">1</span>
@@ -419,27 +430,27 @@
     <h2 class="sec-title">よくいただくご質問</h2>
     <div class="faq">
       <details>
-        <summary>対応エリアはどこですか？</summary>
+        <summary><span class="nw">対応エリアは</span><span class="nw">どこですか？</span></summary>
         <p>地域内を中心に、近隣地域も対応可能です。エリア外の場合もまずはご相談ください。</p>
       </details>
       <details>
-        <summary>見積もりは本当に無料ですか？</summary>
+        <summary><span class="nw">見積もりは</span><span class="nw">本当に無料ですか？</span></summary>
         <p>はい、完全無料です。お見積もりの後でキャンセルされても料金はかかりません。</p>
       </details>
       <details>
-        <summary>今日すぐに来てもらえますか？</summary>
+        <summary><span class="nw">今日すぐに</span><span class="nw">来てもらえますか？</span></summary>
         <p>スケジュールが空いていれば即日対応も可能です。お急ぎの場合はお電話でご連絡ください。</p>
       </details>
       <details>
-        <summary>女性のスタッフはいますか？</summary>
+        <summary><span class="nw">女性のスタッフは</span><span class="nw">いますか？</span></summary>
         <p>ご要望に応じて手配いたします。お気軽にお申し付けください。</p>
       </details>
       <details>
-        <summary>支払い方法は何がありますか？</summary>
+        <summary><span class="nw">支払い方法は</span><span class="nw">何がありますか？</span></summary>
         <p>現金、銀行振込に対応しております。</p>
       </details>
       <details>
-        <summary>近所に知られたくないのですが…</summary>
+        <summary><span class="nw">近所に</span><span class="nw">知られたくないのですが…</span></summary>
         <p>無地のお車でお伺いするなど、ご事情に応じて配慮いたします。秘密厳守でご対応します。</p>
       </details>
     </div>
@@ -447,11 +458,11 @@
 
   <!-- 電話CTA -->
   <section class="sec sec--pink" id="tel">
-    <h2 class="cta__title">まずは無料相談・<span class="nw">お見積もりへ</span></h2>
+    <h2 class="cta__title"><span class="nw">まずは無料相談・</span><span class="nw">お見積もりへ</span></h2>
     <div class="cta__card">
-      <p class="cta__lead">電話で無料相談・お見積もりはこちら</p>
+      <p class="cta__lead"><span class="nw">電話で無料相談・</span><span class="nw">お見積もりはこちら</span></p>
       <a class="cta__tel" href="tel:0123259947"><span class="ms cta__telicon" aria-hidden="true">call</span>0123-25-9947</a>
-      <p class="cta__hours">受付 朝8時〜夜8時（年中無休）</p>
+      <p class="cta__hours"><span class="nw">受付 朝8時〜夜8時</span><span class="nw">（年中無休）</span></p>
       <p class="cta__note">「こんなこと頼めるかな？」のご相談だけでも、お気軽にどうぞ。</p>
     </div>
   </section>
@@ -459,13 +470,13 @@
 </main>
 
 <footer class="foot">
-  <p class="foot__brand">NORTH CLUB株式会社｜北海道のプロ代行サービス「えぞ助」</p>
-  <p class="foot__tel"><a href="tel:0123259947">0123-25-9947</a>　受付 朝8時〜夜8時（年中無休）</p>
+  <p class="foot__brand"><span class="nw">NORTH CLUB株式会社</span> <span class="nw">北海道のプロ代行サービス「えぞ助」</span></p>
+  <p class="foot__tel"><a class="nw" href="tel:0123259947">0123-25-9947</a>　<span class="nw">受付 朝8時〜夜8時（年中無休）</span></p>
 </footer>
 
 <div class="sticky-bar">
   <span class="sticky-bar__label">プロの代行サービス えぞ助</span>
-  <a class="sticky-bar__tel" href="tel:0123259947">無料相談・お見積もり　0123-25-9947<span class="sticky-bar__arrow">›</span></a>
+  <a class="sticky-bar__tel" href="tel:0123259947"><span class="sticky-bar__txt">無料相談・お見積もり</span><span class="sticky-bar__num">0123-25-9947<span class="sticky-bar__arrow">›</span></span></a>
 </div>
 
 <script>
@@ -478,6 +489,32 @@
     i = (i + 1) % slides.length;
     slides[i].classList.add("is-active");
   }, 3000);
+})();
+
+(function () {
+  var nav = document.getElementById("jumpNav");
+  if (!nav) return;
+  var inner = nav.querySelector(".jump__inner");
+  var links = Array.prototype.slice.call(nav.querySelectorAll("a"));
+  var targets = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+  var current = -1;
+  function update() {
+    var y = window.pageYOffset;
+    nav.classList.toggle("is-on", y > 160);
+    var line = y + window.innerHeight * 0.35;
+    var idx = -1;
+    targets.forEach(function (t, i) { if (t && t.offsetTop <= line) idx = i; });
+    if (idx === current) return;
+    current = idx;
+    links.forEach(function (a, i) { a.classList.toggle("is-current", i === idx); });
+    if (idx >= 0) {
+      var a = links[idx];
+      inner.scrollTo({ left: a.offsetLeft - (inner.clientWidth - a.offsetWidth) / 2, behavior: "smooth" });
+    }
+  }
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
 })();
 
 (function () {
@@ -499,6 +536,16 @@
     el.classList.add("reveal");
     io.observe(el);
   });
+  /* 保険: 監視が働かない環境でも、スクロール位置から判定して必ず表示する */
+  function sweep() {
+    var limit = window.innerHeight * 0.98;
+    Array.prototype.forEach.call(document.querySelectorAll(".reveal:not(.is-in)"), function (el) {
+      if (el.getBoundingClientRect().top < limit) { el.classList.add("is-in"); io.unobserve(el); }
+    });
+  }
+  window.addEventListener("scroll", sweep, { passive: true });
+  window.addEventListener("load", sweep);
+  setTimeout(sweep, 600);
 })();
 </script>
 </body>
