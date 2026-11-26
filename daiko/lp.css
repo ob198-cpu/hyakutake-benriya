@@ -85,9 +85,9 @@ a { color: var(--magenta); }
 
 /* ---------- 中央カラム（適切な余白を確保） ---------- */
 .col {
-  max-width: 1200px;
+  max-width: min(1560px, calc(100% - 2 * clamp(16px, 12vw - 120px, 180px)));
   margin: 0 auto;
-  padding: 2em clamp(16px, 2.5vw, 32px) 1em;
+  padding: 2em 0 1em;
 }
 
 /* ---------- セクション面 ---------- */
