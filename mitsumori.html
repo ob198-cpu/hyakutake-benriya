@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="電話・写真でお見積もり。作業場所とお困りのことを教えてください。内容に合ったプロが、料金と日程をご案内します。" />
+<title>電話・写真でお見積もり｜えぞ助（NORTH CLUB株式会社）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script>if(localStorage.getItem("ezosuke-text-large")==="1"){document.documentElement.classList.add("text-large");}</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="assets/ezosuke-logo.png" alt="プロのなんでも代行 えぞ助" width="900" height="429" />
+      <span class="header__company">NORTH CLUB<br />株式会社</span>
+    </a>
+    <nav class="nav">
+      <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="navList">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__list" id="navList">
+        <li><a href="silver.html">シニアの方へ</a></li>
+        <li><a href="index.html#services">代行サービス</a></li>
+        <li><a href="soudan.html">プロの相談室</a></li>
+        <li><a href="mitsumori.html" aria-current="page">お見積もり</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ヒーロー -->
+  <section class="section">
+    <div class="container">
+      <h1 class="hero__title">電話・写真でお見積もり</h1>
+      <p class="section__lead">作業場所と、お困りのことを教えてください。内容に合ったプロが、料金と日程をご案内します。</p>
+    </div>
+  </section>
+
+  <!-- 電話で相談する -->
+  <section class="section section--cream" id="phone">
+    <div class="container">
+      <h2 class="section__title">電話で相談する</h2>
+      <p class="tel-display">011-XXX-XXXX（仮）</p>
+      <p>写真を送れなくても大丈夫です。地域・作業内容・ご希望の時期を、分かる範囲でお話しください。</p>
+      <p class="tel-caption">この番号は見本です。正式な番号は公開時に掲載します。</p>
+    </div>
+  </section>
+
+  <!-- 写真で見積もりを頼む -->
+  <section class="section" id="photo">
+    <div class="container">
+      <h2 class="section__title">写真で見積もりを頼む</h2>
+      <p class="section__lead">現場全体と気になる箇所が分かる写真をご用意ください。写真で金額を判断しにくいときは、現地確認の方法を相談します。</p>
+      <div class="notice">確認用サイトです。下の欄で写真と依頼内容を確認できます。内容は端末の外へ送信されません。</div>
+      <div class="form-block">
+        <label for="requestText">作業場所・希望時期・ご依頼内容</label>
+        <textarea id="requestText" placeholder="例：札幌市北区の店舗駐車場。開店前の除雪を希望します。"></textarea>
+        <label for="photoInput">現場の写真（任意）</label>
+        <input type="file" id="photoInput" accept="image/*" multiple />
+        <div class="btn-row">
+          <button class="btn btn--primary" id="previewBtn" type="button">内容を確認する</button>
+        </div>
+        <div class="preview-area" id="previewArea" hidden>
+          <div class="preview-card">
+            <h3>ご入力内容の確認（この端末の中だけで表示しています）</h3>
+            <p id="previewText"></p>
+            <div class="preview-thumbs" id="previewThumbs"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__brand">
+      <span class="footer__company">NORTH CLUB株式会社</span>
+      <span class="footer__tag">北海道のプロ代行サービス「えぞ助」</span>
+    </div>
+    <div class="footer__links">
+      <a href="index.html">トップへ</a>
+      <a href="mitsumori.html#phone">電話窓口のご案内</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

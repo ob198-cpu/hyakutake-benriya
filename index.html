@@ -1,766 +1,152 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="便利屋ひまわり隊 — お掃除・片付けサービス、粗大ゴミの片付け、除雪、各種代行、パソコンサポートまで幅広くお受けします。" />
-<title>便利屋ひまわり隊 | その他、何でもお受けします</title>
+<meta name="description" content="えぞ助（NORTH CLUB株式会社）は北海道のプロ代行サービス・相談室。除排雪、草刈り、電気工事、ドローン作業、お墓の清掃、こころと営業の相談まで、その道のプロに頼めます。" />
+<title>えぞ助｜北海道のプロ代行サービス・相談室（NORTH CLUB株式会社）</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<script>if(localStorage.getItem("ezosuke-text-large")==="1"){document.documentElement.classList.add("text-large");}</script>
 </head>
 <body>
 
-<!-- 共有SVG定義（ひまわり） -->
-<svg aria-hidden="true" width="0" height="0" style="position:absolute" focusable="false">
-  <defs>
-    <path id="petal" d="M0,-46 C13,-48 17,-84 0,-100 C-17,-84 -13,-48 0,-46 Z" />
-    <g id="sunflower">
-      <g class="sunflower__petals">
-        <use href="#petal" fill="#F6B321"/>
-        <use href="#petal" transform="rotate(30)" fill="#F2A516"/>
-        <use href="#petal" transform="rotate(60)" fill="#F6B321"/>
-        <use href="#petal" transform="rotate(90)" fill="#F2A516"/>
-        <use href="#petal" transform="rotate(120)" fill="#F6B321"/>
-        <use href="#petal" transform="rotate(150)" fill="#F2A516"/>
-        <use href="#petal" transform="rotate(180)" fill="#F6B321"/>
-        <use href="#petal" transform="rotate(210)" fill="#F2A516"/>
-        <use href="#petal" transform="rotate(240)" fill="#F6B321"/>
-        <use href="#petal" transform="rotate(270)" fill="#F2A516"/>
-        <use href="#petal" transform="rotate(300)" fill="#F6B321"/>
-        <use href="#petal" transform="rotate(330)" fill="#F2A516"/>
-        <g transform="rotate(15)">
-          <use href="#petal" fill="#E39104" transform="scale(0.92)"/>
-          <use href="#petal" transform="rotate(30) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(60) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(90) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(120) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(150) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(180) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(210) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(240) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(270) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(300) scale(0.92)" fill="#E39104"/>
-          <use href="#petal" transform="rotate(330) scale(0.92)" fill="#E39104"/>
-        </g>
-      </g>
-      <circle r="44" fill="#6B4A1E"/>
-      <circle r="36" fill="#7D5A26"/>
-      <circle r="26" fill="#8F6B30"/>
-      <circle r="15" fill="#A17C3B"/>
-    </g>
-    <g id="sunflower-face">
-      <use href="#sunflower"/>
-      <circle r="30" fill="#8F6B30"/>
-      <circle cx="-13" cy="-7" r="4.5" fill="#3F2D10"/>
-      <circle cx="13" cy="-7" r="4.5" fill="#3F2D10"/>
-      <circle cx="-11.5" cy="-8.5" r="1.6" fill="#fff"/>
-      <circle cx="14.5" cy="-8.5" r="1.6" fill="#fff"/>
-      <circle cx="-22" cy="6" r="5.5" fill="#E58E7A" opacity="0.8"/>
-      <circle cx="22" cy="6" r="5.5" fill="#E58E7A" opacity="0.8"/>
-      <path d="M-9,7 Q0,17 9,7" stroke="#3F2D10" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-    </g>
-    <g id="cloud-shape" fill="#FFFFFF">
-      <ellipse cx="26" cy="32" rx="20" ry="14"/>
-      <ellipse cx="55" cy="24" rx="24" ry="17"/>
-      <ellipse cx="84" cy="33" rx="19" ry="13"/>
-      <rect x="16" y="30" width="78" height="16" rx="8"/>
-    </g>
-    <path id="sparkle-shape" d="M12 0 L15 9 L24 12 L15 15 L12 24 L9 15 L0 12 L9 9 Z"/>
-    <g id="bee">
-      <ellipse cx="-6" cy="-13" rx="8" ry="6" fill="#D6ECF7"/>
-      <ellipse cx="7" cy="-14" rx="7" ry="5.5" fill="#E8F5FB"/>
-      <ellipse cx="0" cy="0" rx="16" ry="12" fill="#FFD34D"/>
-      <path d="M-9,-9.5 Q-12,0 -9,9.5 L-3,11.5 Q-6,0 -3,-11.5 Z" fill="#3F2D10"/>
-      <path d="M1,-12 Q-2,0 1,12 L7,10 Q4,0 7,-10 Z" fill="#3F2D10"/>
-      <circle cx="11" cy="-3" r="1.8" fill="#3F2D10"/>
-      <path d="M10,3 Q12,5 14,3" stroke="#3F2D10" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    </g>
-    <g id="butterfly">
-      <path d="M-2,-3 C-18,-16 -26,2 -4,5 Z" fill="#F5A9B4"/>
-      <path d="M2,-3 C18,-16 26,2 4,5 Z" fill="#9CCAE8"/>
-      <path d="M-3,4 C-16,12 -7,19 -2,8 Z" fill="#F7BE6D"/>
-      <path d="M3,4 C16,12 7,19 2,8 Z" fill="#F7BE6D"/>
-      <ellipse cx="0" cy="2" rx="2.5" ry="9" fill="#5A4632"/>
-      <path d="M-1,-6 Q-4,-12 -7,-13 M1,-6 Q4,-12 7,-13" stroke="#5A4632" stroke-width="1.3" fill="none" stroke-linecap="round"/>
-    </g>
-  </defs>
-</svg>
-
-<header class="header" id="siteHeader">
+<header class="header">
   <div class="container header__inner">
-    <a href="#top" class="header__logo">
-      <span class="header__logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 220 220" width="40" height="40" focusable="false">
-          <use href="#sunflower" transform="translate(110 110)"/>
-        </svg>
-      </span>
-      <span class="header__logo-text">便利屋ひまわり隊</span>
+    <a href="index.html" class="header__logo">
+      <img src="assets/ezosuke-logo.png" alt="プロのなんでも代行 えぞ助" width="900" height="429" />
+      <span class="header__company">NORTH CLUB<br />株式会社</span>
     </a>
     <nav class="nav">
-      <ul class="nav__list" id="navList">
-        <li><a href="#problems">こんな時に</a></li>
-        <li><a href="#services">できること</a></li>
-        <li><a href="#price">料金</a></li>
-        <li><a href="#flow">ご依頼の流れ</a></li>
-        <li><a href="#contact" class="nav__cta">お問い合わせ</a></li>
-      </ul>
-      <a href="tel:0123259947" class="header__tel">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
-        <span>0123-25-9947</span>
-      </a>
       <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="navList">
         <span></span><span></span><span></span>
       </button>
+      <ul class="nav__list" id="navList">
+        <li><a href="silver.html">シニアの方へ</a></li>
+        <li><a href="index.html#services" aria-current="page">代行サービス</a></li>
+        <li><a href="soudan.html">プロの相談室</a></li>
+        <li><a href="mitsumori.html">お見積もり</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main>
 
   <!-- ヒーロー -->
   <section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="hero__deco" aria-hidden="true">
-      <svg class="deco-cloud deco-cloud--1" viewBox="0 0 110 50" focusable="false"><use href="#cloud-shape"/></svg>
-      <svg class="deco-cloud deco-cloud--2" viewBox="0 0 110 50" focusable="false"><use href="#cloud-shape"/></svg>
-      <svg class="deco-cloud deco-cloud--3" viewBox="0 0 110 50" focusable="false"><use href="#cloud-shape"/></svg>
-      <svg class="deco-sparkle deco-sparkle--1" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#F2A516"/></svg>
-      <svg class="deco-sparkle deco-sparkle--2" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#F2A516"/></svg>
-      <svg class="deco-sparkle deco-sparkle--3" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#E58E7A"/></svg>
-      <svg class="deco-sparkle deco-sparkle--4" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#9CCAE8"/></svg>
-      <svg class="deco-bee" viewBox="-30 -30 60 60" focusable="false"><use href="#bee"/></svg>
-      <svg class="deco-butterfly" viewBox="-30 -30 60 60" focusable="false"><use href="#butterfly"/></svg>
-    </div>
-
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <p class="hero__lead">
-          <span>地域のみなさまの</span>
-          <span class="hero__lead-accent">「困った！」を解決します</span>
-        </p>
-        <h1 class="hero__title">
-          なんでも<br />
-          お手伝いします！
-        </h1>
-        <p class="hero__desc">
-          お掃除・片付けサービス・粗大ゴミの片付け・<br />
-          除雪・代行・パソコンサポートまで。<br />
-          <strong>お電話一本でかけつけます。</strong>
-        </p>
-
-        <div class="hero__cta">
-          <a href="tel:0123259947" class="btn btn--phone">
-            <span class="btn__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26" focusable="false"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
-            </span>
-            <span class="btn--phone__body">
-              <small>お気軽にお電話ください</small>
-              <strong>0123-25-9947</strong>
-            </span>
-          </a>
-          <a href="#contact" class="btn btn--mail">
-            <span class="btn__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="20" height="20" focusable="false"><path fill="currentColor" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 7L4.5 6.2c-.3-.2-.5 0-.5.3v.4l8 5.4 8-5.4v-.4c0-.3-.2-.5-.5-.3L12 11z"/></svg>
-            </span>
-            <span>メールでご相談</span>
-          </a>
-        </div>
-
-        <ul class="hero__points">
-          <li><span class="hero__point-icon" aria-hidden="true">⭕</span>見積もり<strong>無料</strong></li>
-          <li><span class="hero__point-icon" aria-hidden="true">⭕</span><strong>幅広い業務</strong>対応</li>
-          <li><span class="hero__point-icon" aria-hidden="true">⭕</span><strong>秘密</strong>厳守</li>
-        </ul>
-      </div>
-
-      <!-- ひまわり -->
-      <div class="hero__art" aria-hidden="true">
-        <svg viewBox="0 0 460 460" class="hero__sunflower sway" focusable="false">
-          <g transform="translate(230 230) scale(1.9)">
-            <use href="#sunflower-face"/>
-          </g>
-        </svg>
-        <svg viewBox="0 0 220 220" class="hero__sunflower hero__sunflower--small" focusable="false">
-          <g class="spin-slow spin-slow--reverse" transform-origin="110 110">
-            <use href="#sunflower" transform="translate(110 110) scale(0.85)"/>
-          </g>
-        </svg>
-      </div>
-    </div>
-
-    <div class="hero__wave" aria-hidden="true">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" focusable="false">
-        <path d="M0,48 C240,88 480,8 720,28 C960,48 1200,84 1440,44 L1440,90 L0,90 Z" fill="#FFFDF7"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- お困りごと -->
-  <section id="problems" class="section problems">
-    <div class="problems__deco" aria-hidden="true">
-      <svg class="deco-cloud problems__cloud1" viewBox="0 0 110 50" focusable="false"><use href="#cloud-shape"/></svg>
-      <svg class="deco-sparkle problems__sp1" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#F2A516"/></svg>
-      <svg class="deco-sparkle problems__sp2" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#9CCAE8"/></svg>
-    </div>
     <div class="container">
-      <header class="section__head">
-        <h2 class="section__title">
-          <span class="section__title-emoji" aria-hidden="true">💭</span>
-          こんなお困りごと、ありませんか？
-        </h2>
-      </header>
-
-      <div class="problems__grid">
-        <div class="bubble">
-          <span class="bubble__emoji" aria-hidden="true">💡</span>
-          <p>電球が切れたけど、<br />高くて届かない…</p>
-        </div>
-        <div class="bubble">
-          <span class="bubble__emoji" aria-hidden="true">🌿</span>
-          <p>草刈や外まわりを<br />まとめて相談したい…</p>
-        </div>
-        <div class="bubble">
-          <span class="bubble__emoji" aria-hidden="true">📦</span>
-          <p>大きなゴミを<br />運び出せない…</p>
-        </div>
-        <div class="bubble">
-          <span class="bubble__emoji" aria-hidden="true">🛒</span>
-          <p>買い物に<br />行くのが大変…</p>
-        </div>
-        <div class="bubble">
-          <span class="bubble__emoji" aria-hidden="true">❄️</span>
-          <p>雪かきが<br />追いつかない…</p>
-        </div>
-        <div class="bubble">
-          <span class="bubble__emoji" aria-hidden="true">💻</span>
-          <p>パソコンや集客のことを<br />誰かに聞きたい…</p>
-        </div>
+      <p class="eyebrow">北海道のプロ代行サービス・相談室</p>
+      <h1 class="hero__title"><span class="nw">その道のプロに、</span><span class="nw">頼める。</span><span class="nw">話せる。</span></h1>
+      <p class="hero__lead"><span class="nw">頼みやすい価格。</span><span class="nw">手配は一度。</span><span class="nw">対応は迅速。</span></p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="mitsumori.html#phone">電話で相談・見積もり</a>
+        <a class="btn btn--outline" href="mitsumori.html#photo">写真で見積もり</a>
+        <a class="btn btn--outline" href="silver.html">シニアの方・ご家族へ</a>
       </div>
-
-      <div class="problems__answer">
-        <p>ぜんぶ、私たちにお任せください！</p>
-        <span class="problems__answer-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="30" height="30" focusable="false"><path fill="currentColor" d="M12 20l-8-8h5V4h6v8h5l-8 8z"/></svg>
-        </span>
+      <figure class="hero__figure">
+        <img src="assets/hero-winter.jpg" alt="雪の積もった札幌の店舗前で除雪作業をするホイールローダー" />
+      </figure>
+      <div class="hero__sub">
+        <h2>冬のご依頼｜札幌の除雪・排雪</h2>
+        <p>朝の出勤や開店に備えて、駐車場と搬入口を確保。使い始める時間に合わせてご相談ください。</p>
       </div>
     </div>
   </section>
 
-  <!-- できること -->
-  <section id="services" class="section services">
-    <svg class="section-flower section-flower--services" viewBox="0 0 220 220" aria-hidden="true" focusable="false"><use href="#sunflower" transform="translate(110 110)"/></svg>
-    <div class="container">
-      <header class="section__head">
-        <p class="section__eyebrow">できること</p>
-        <h2 class="section__title">
-          <span class="section__title-emoji" aria-hidden="true">✨</span>
-          こんなことを<br class="sp-only" />お手伝いします
-        </h2>
-        <p class="section__desc">どんな小さなことでも、お気軽にどうぞ。</p>
-      </header>
-
-      <div class="services__grid">
-
-        <article class="service-card service-card--orange">
-          <div class="service-card__icon"><span aria-hidden="true">🧹</span></div>
-          <h3>お掃除・<br />片付けサービス</h3>
-          <p>お部屋・キッチン・水まわりなど、暮らしの中の片付けをお手伝いします。</p>
-          <ul>
-            <li>日常のお掃除</li>
-            <li>片付け</li>
-            <li>水まわり</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--yellow">
-          <div class="service-card__icon"><span aria-hidden="true">📦</span></div>
-          <h3>不用品・粗大ゴミの<br />片付け</h3>
-          <p>大きな家具や粗大ゴミなど、自分では動かしにくい物の片付けをお手伝いします。</p>
-          <ul>
-            <li>粗大ゴミ</li>
-            <li>不用品</li>
-            <li>搬出補助</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--pink">
-          <div class="service-card__icon"><span aria-hidden="true">🏠</span></div>
-          <h3>ゴミ屋敷の<br />片付け</h3>
-          <p>大量の荷物や生活ゴミで手をつけにくいお部屋も、まずはご相談ください。</p>
-          <ul>
-            <li>室内片付け</li>
-            <li>仕分け</li>
-            <li>秘密厳守</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--blue">
-          <div class="service-card__icon"><span aria-hidden="true">🚚</span></div>
-          <h3>格安引越しの<br />お手伝い</h3>
-          <p>荷物運びやちょっとした引越し作業を、必要な分だけお手伝いします。</p>
-          <ul>
-            <li>荷物運び</li>
-            <li>搬入搬出</li>
-            <li>小規模引越し</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--mint">
-          <div class="service-card__icon"><span aria-hidden="true">☕</span></div>
-          <h3>お話し相手</h3>
-          <p>ひとりで過ごす時間が長い方の、ちょっとしたお話し相手になります。</p>
-          <ul>
-            <li>見守り</li>
-            <li>雑談</li>
-            <li>ご家族の安心</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--blue">
-          <div class="service-card__icon"><span aria-hidden="true">🛒</span></div>
-          <h3>買物代行</h3>
-          <p>日用品や食料品など、外出が難しい時のお買い物を代行します。</p>
-          <ul>
-            <li>日用品</li>
-            <li>食料品</li>
-            <li>近隣のおつかい</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--orange">
-          <div class="service-card__icon"><span aria-hidden="true">🔌</span></div>
-          <h3>家電の設置・<br />取り付け</h3>
-          <p>家電の設置や取り付けなど、少し人手がほしい作業をご相談ください。</p>
-          <ul>
-            <li>設置補助</li>
-            <li>取り付け</li>
-            <li>電球交換</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--mint">
-          <div class="service-card__icon"><span aria-hidden="true">🌿</span></div>
-          <h3>草刈</h3>
-          <p>伸びた草や外まわりのお困りごとも、状況をお聞きして対応します。</p>
-          <ul>
-            <li>草刈</li>
-            <li>現地確認</li>
-            <li>ご相談</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--pink">
-          <div class="service-card__icon"><span aria-hidden="true">💐</span></div>
-          <h3>遺品整理・<br />お焚き上げ</h3>
-          <p>大切なお品を丁寧に扱い、心を込めて整理のお手伝いをします。</p>
-          <ul>
-            <li>遺品整理</li>
-            <li>お焚き上げ</li>
-            <li>秘密厳守</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--blue">
-          <div class="service-card__icon"><span aria-hidden="true">❄️</span></div>
-          <h3>除雪・雪かき・<br />屋根の雪下ろし</h3>
-          <p>玄関前や駐車場、屋根の雪下ろしまで冬のお困りごとをお受けします。</p>
-          <ul>
-            <li>除雪</li>
-            <li>雪かき</li>
-            <li>屋根の雪下ろし</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--yellow">
-          <div class="service-card__icon"><span aria-hidden="true">🧑‍💼</span></div>
-          <h3>代理出席</h3>
-          <p>事情があって出席が難しい場面の代理対応もご相談ください。</p>
-          <ul>
-            <li>代理対応</li>
-            <li>事前相談</li>
-            <li>柔軟対応</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--orange">
-          <div class="service-card__icon"><span aria-hidden="true">💻</span></div>
-          <h3>パソコン<br />サポート</h3>
-          <p>設定や操作で困った時、身近な相談相手としてサポートします。</p>
-          <ul>
-            <li>初期設定</li>
-            <li>操作相談</li>
-            <li>トラブル相談</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--mint">
-          <div class="service-card__icon"><span aria-hidden="true">🌐</span></div>
-          <h3>ホームページ<br />制作</h3>
-          <p>お店やサービスのホームページ制作もお受けしています。</p>
-          <ul>
-            <li>制作相談</li>
-            <li>更新</li>
-            <li>公開サポート</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--blue">
-          <div class="service-card__icon"><span aria-hidden="true">📈</span></div>
-          <h3>集客<br />コンサルティング</h3>
-          <p>集客や販促の相談など、事業まわりのお困りごともお受けします。</p>
-          <ul>
-            <li>集客相談</li>
-            <li>販促</li>
-            <li>改善提案</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--pink">
-          <div class="service-card__icon"><span aria-hidden="true">💬</span></div>
-          <h3>就職・恋愛・<br />離婚相談</h3>
-          <p>人に話しづらい相談も、まずはお気軽にお話しください。</p>
-          <ul>
-            <li>就職相談</li>
-            <li>恋愛相談</li>
-            <li>離婚相談</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--yellow">
-          <div class="service-card__icon"><span aria-hidden="true">♻️</span></div>
-          <h3>リサイクル<br />出張買取</h3>
-          <p>使わなくなった品物の出張買取についてもご相談いただけます。</p>
-          <ul>
-            <li>出張買取</li>
-            <li>査定相談</li>
-            <li>リサイクル</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--orange">
-          <div class="service-card__icon"><span aria-hidden="true">🛠️</span></div>
-          <h3>雨漏り修理</h3>
-          <p>雨漏りが気になる時は、状況確認からお気軽にご相談ください。</p>
-          <ul>
-            <li>雨漏り</li>
-            <li>修理相談</li>
-            <li>現地確認</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--mint">
-          <div class="service-card__icon"><span aria-hidden="true">🙏</span></div>
-          <h3>お墓掃除・<br />お墓参り代行</h3>
-          <p>遠方や多忙で行けない時のお墓掃除・お墓参りを代行します。</p>
-          <ul>
-            <li>お墓掃除</li>
-            <li>お墓参り代行</li>
-            <li>ご報告</li>
-          </ul>
-        </article>
-
-        <article class="service-card service-card--pink service-card--wide">
-          <div class="service-card__icon"><span aria-hidden="true">💬</span></div>
-          <h3>その他、何でもお受けします</h3>
-          <p>「これも頼めるかな…？」と思うことでも大丈夫。<br />まずはお気軽にお電話ください。</p>
-        </article>
-
+  <!-- シニアの方とご家族へ -->
+  <section class="section section--cream">
+    <div class="container senior-band__inner">
+      <div class="senior-band__photo">
+        <img src="assets/senior-phone.jpg" alt="自宅で電話をかけるシニアの女性" />
+      </div>
+      <div>
+        <h2 class="senior-band__title">シニアの方とご家族へ</h2>
+        <p>「誰に頼めばいいか分からない」。そんなときも、お困りのことからゆっくりお聞かせください。</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="silver.html">シルバーページを開く</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 料金 -->
-  <section id="price" class="section price">
+  <!-- プロに仕事を頼む -->
+  <section class="section" id="services">
     <div class="container">
-      <header class="section__head">
-        <p class="section__eyebrow">料金</p>
-        <h2 class="section__title">
-          <span class="section__title-emoji" aria-hidden="true">💰</span>
-          まずは内容をお聞きしてお見積もりします
-        </h2>
-      </header>
-
-      <div class="price__big">
-        <p class="price__big-label">基本料金</p>
-        <p class="price__big-amount">
-          <span class="price__big-prefix">1時間</span>
-          <strong>3,300<span>円</span></strong>
-          <span class="price__big-suffix">〜</span>
-        </p>
-        <p class="price__big-note">お見積もりは<strong>完全無料！</strong></p>
-      </div>
-
-      <div class="price__table">
-        <div class="price__row">
-          <div>🧹 お掃除・片付けサービス</div>
-          <div>5,500円〜</div>
+      <h2 class="section__title">プロに仕事を頼む</h2>
+      <div class="card-grid card-grid--3">
+        <div class="card">
+          <h3>会社・店舗の現場</h3>
+          <p>除排雪、敷地の草刈り、電気工事、建築の相談、建物や太陽光設備の点検。</p>
         </div>
-        <div class="price__row">
-          <div>📦 不用品・粗大ゴミの片付け</div>
-          <div>お見積もり</div>
+        <div class="card">
+          <h3>農業・建設の現場</h3>
+          <p>ドローンによる播種・防除、工事の定点撮影や写真報告。必要な工程をまとめて相談できます。</p>
         </div>
-        <div class="price__row">
-          <div>❄️ 除雪・雪かき・屋根の雪下ろし</div>
-          <div>5,500円〜</div>
+        <div class="card">
+          <h3>実家・土地・お墓</h3>
+          <p>空き家の巡回、写真報告、冬囲い、お墓の清掃・お参り。離れて暮らすご家族からもご相談ください。</p>
         </div>
-        <div class="price__row">
-          <div>💻 パソコンサポート・ホームページ制作</div>
-          <div>お見積もり</div>
-        </div>
-        <div class="price__row">
-          <div>💬 代理・相談・各種代行</div>
-          <div>お見積もり</div>
-        </div>
-      </div>
-      <p class="price__note">※ 表示はすべて税込価格です。出張費・資材費・作業内容に応じた費用が別途かかる場合があります。</p>
-    </div>
-  </section>
-
-  <!-- ご依頼の流れ -->
-  <section id="flow" class="section flow">
-    <svg class="section-flower section-flower--flow" viewBox="0 0 220 220" aria-hidden="true" focusable="false"><use href="#sunflower" transform="translate(110 110)"/></svg>
-    <div class="container">
-      <header class="section__head">
-        <p class="section__eyebrow">ご依頼の流れ</p>
-        <h2 class="section__title">
-          <span class="section__title-emoji" aria-hidden="true">📝</span>
-          かんたん4ステップ
-        </h2>
-      </header>
-
-      <ol class="flow__list">
-        <li class="flow__item">
-          <div class="flow__num" aria-hidden="true">1</div>
-          <div class="flow__icon" aria-hidden="true">📞</div>
-          <h3>お電話<br />またはメール</h3>
-          <p>「○○ができますか？」のご相談だけでもOKです。</p>
-        </li>
-        <li class="flow__item">
-          <div class="flow__num" aria-hidden="true">2</div>
-          <div class="flow__icon" aria-hidden="true">📋</div>
-          <h3>お見積もり<br />（無料）</h3>
-          <p>ご依頼内容をお伺いし、料金をお伝えします。</p>
-        </li>
-        <li class="flow__item">
-          <div class="flow__num" aria-hidden="true">3</div>
-          <div class="flow__icon" aria-hidden="true">🚗</div>
-          <h3>お伺いして<br />作業</h3>
-          <p>ご都合のよい日時にお伺いし、丁寧に作業します。</p>
-        </li>
-        <li class="flow__item">
-          <div class="flow__num" aria-hidden="true">4</div>
-          <div class="flow__icon" aria-hidden="true">😊</div>
-          <h3>お支払い<br />（作業後）</h3>
-          <p>作業が終わってから、現金または銀行振込でOK。</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- 大きな電話CTA -->
-  <section class="big-cta">
-    <div class="big-cta__deco" aria-hidden="true">
-      <svg viewBox="0 0 220 220" class="big-cta__flower big-cta__flower--left" focusable="false">
-        <g class="spin-slow" transform-origin="110 110"><use href="#sunflower" transform="translate(110 110)"/></g>
-      </svg>
-      <svg viewBox="0 0 220 220" class="big-cta__flower big-cta__flower--right" focusable="false">
-        <g class="spin-slow spin-slow--reverse" transform-origin="110 110"><use href="#sunflower" transform="translate(110 110)"/></g>
-      </svg>
-      <svg class="deco-sparkle big-cta__sparkle big-cta__sparkle--1" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#FFFFFF"/></svg>
-      <svg class="deco-sparkle big-cta__sparkle big-cta__sparkle--2" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#FFE28A"/></svg>
-      <svg class="deco-sparkle big-cta__sparkle big-cta__sparkle--3" viewBox="0 0 24 24" focusable="false"><use href="#sparkle-shape" fill="#FFFFFF"/></svg>
-    </div>
-    <div class="container">
-      <p class="big-cta__lead">まずは<strong>お電話</strong>ください！</p>
-      <a href="tel:0123259947" class="big-cta__phone">
-        <span class="big-cta__phone-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="40" height="40" focusable="false"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
-        </span>
-        <span class="big-cta__phone-num">0123-25-9947</span>
-      </a>
-      <p class="big-cta__hours">受付　朝8時 〜 夜8時（年中無休）</p>
-      <p class="big-cta__sub">「これ、お願いできるかな？」のご相談だけでもOKです！</p>
-    </div>
-  </section>
-
-  <!-- よくある質問 -->
-  <section id="faq" class="section faq">
-    <div class="container">
-      <header class="section__head">
-        <p class="section__eyebrow">よくあるご質問</p>
-        <h2 class="section__title">
-          <span class="section__title-emoji" aria-hidden="true">❓</span>
-          よくいただくご質問
-        </h2>
-      </header>
-
-      <div class="faq__list">
-        <details class="faq__item">
-          <summary>対応エリアはどこですか？<span class="faq__marker" aria-hidden="true"></span></summary>
-          <p>地域内を中心に、近隣地域も対応可能です。エリア外の場合もまずはご相談ください。</p>
-        </details>
-        <details class="faq__item">
-          <summary>見積もりは本当に無料ですか？<span class="faq__marker" aria-hidden="true"></span></summary>
-          <p>はい、完全無料です。お見積もりの後でキャンセルされても料金はかかりません。</p>
-        </details>
-        <details class="faq__item">
-          <summary>今日すぐに来てもらえますか？<span class="faq__marker" aria-hidden="true"></span></summary>
-          <p>スケジュールが空いていれば即日対応も可能です。お急ぎの場合はお電話でご連絡ください。</p>
-        </details>
-        <details class="faq__item">
-          <summary>女性のスタッフはいますか？<span class="faq__marker" aria-hidden="true"></span></summary>
-          <p>ご要望に応じて手配いたします。お気軽にお申し付けください。</p>
-        </details>
-        <details class="faq__item">
-          <summary>支払い方法は何がありますか？<span class="faq__marker" aria-hidden="true"></span></summary>
-          <p>現金、銀行振込に対応しております。</p>
-        </details>
-        <details class="faq__item">
-          <summary>近所に知られたくないのですが…<span class="faq__marker" aria-hidden="true"></span></summary>
-          <p>無地のお車でお伺いするなど、ご事情に応じて配慮いたします。秘密厳守でご対応します。</p>
-        </details>
       </div>
     </div>
   </section>
 
-  <!-- お問い合わせ -->
-  <section id="contact" class="section contact">
-    <svg class="section-flower section-flower--contact" viewBox="0 0 220 220" aria-hidden="true" focusable="false"><use href="#sunflower-face" transform="translate(110 110)"/></svg>
+  <!-- プロに悩みを相談する -->
+  <section class="section section--line">
     <div class="container">
-      <header class="section__head">
-        <p class="section__eyebrow">お問い合わせ</p>
-        <h2 class="section__title">
-          <span class="section__title-emoji" aria-hidden="true">✉️</span>
-          メールでのご相談
-        </h2>
-        <p class="section__desc">お電話が難しい方は、こちらのフォームからどうぞ。</p>
-      </header>
+      <h2 class="section__title">プロに悩みを相談する</h2>
+      <p class="section__lead">職場の人間関係は臨床心理士へ。商品の売り方や伝え方は営業アドバイザーへ。</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="soudan.html">プロの相談室を開く</a>
+      </div>
+    </div>
+  </section>
 
-      <form class="contact__form" id="contactForm" novalidate>
-        <div class="form__row">
-          <label for="name">お名前 <span class="form__req">必須</span></label>
-          <input type="text" id="name" name="name" required autocomplete="name" placeholder="例：山田 太郎" />
+  <!-- 季節のご依頼 -->
+  <section class="section section--line">
+    <div class="container">
+      <h2 class="section__title">季節のご依頼</h2>
+      <div class="card-grid card-grid--2">
+        <div class="card">
+          <h3>春・夏</h3>
+          <p>転勤前の片付け、冷房の夏支度、学校行事・夏祭りの設営、お盆のお墓掃除。</p>
         </div>
-
-        <div class="form__row">
-          <label for="tel">お電話番号</label>
-          <input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="例：090-1234-5678" />
+        <div class="card">
+          <h3>秋・冬</h3>
+          <p>お彼岸のお参り、庭木の冬囲い、除排雪。店舗のクリスマス装飾から門松への入れ替えまで。</p>
         </div>
+      </div>
+      <p class="section__note">季節の作業は、ご希望の地域・日程と担当できる専門家を確認してご案内します。</p>
+    </div>
+  </section>
 
-        <div class="form__row">
-          <label for="email">メールアドレス <span class="form__req">必須</span></label>
-          <input type="email" id="email" name="email" required autocomplete="email" placeholder="例：example@email.com" />
-        </div>
-
-        <div class="form__row">
-          <label for="service">どんなご依頼ですか？ <span class="form__req">必須</span></label>
-          <select id="service" name="service" required>
-            <option value="">選んでください</option>
-            <option>お掃除・片付けサービス</option>
-            <option>不用品・粗大ゴミの片付け</option>
-            <option>ゴミ屋敷の片付け</option>
-            <option>格安引越しのお手伝い</option>
-            <option>お話し相手</option>
-            <option>買物代行</option>
-            <option>家電の設置・取り付け</option>
-            <option>草刈</option>
-            <option>遺品整理・お焚き上げ</option>
-            <option>除雪・雪かき・屋根の雪下ろし</option>
-            <option>代理出席</option>
-            <option>パソコンサポート</option>
-            <option>ホームページ制作</option>
-            <option>集客コンサルティング</option>
-            <option>就職・恋愛・離婚相談</option>
-            <option>リサイクル出張買取</option>
-            <option>雨漏り修理</option>
-            <option>お墓掃除・お墓参り代行</option>
-            <option>その他</option>
-          </select>
-        </div>
-
-        <div class="form__row">
-          <label for="date">ご希望の日にち</label>
-          <input type="text" id="date" name="date" placeholder="例：今週中、なるべく早く 等" />
-        </div>
-
-        <div class="form__row">
-          <label for="message">くわしい内容 <span class="form__req">必須</span></label>
-          <textarea id="message" name="message" rows="6" required placeholder="ご依頼の内容や、おうちの場所などを書いてください。"></textarea>
-        </div>
-
-        <div class="form__row form__row--check">
-          <label class="form__check">
-            <input type="checkbox" id="agree" required />
-            <span>個人情報の取り扱いに同意します</span>
-          </label>
-        </div>
-
-        <button type="submit" class="btn btn--submit">
-          <span aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="20" height="20" focusable="false"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          </span>この内容で送る
-        </button>
-        <p class="form__note">送信後、2日以内にご連絡いたします。</p>
-      </form>
+  <!-- どんなプロに頼めますか？ -->
+  <section class="section section--line">
+    <div class="container">
+      <h2 class="section__title">どんなプロに頼めますか？</h2>
+      <p class="section__lead">電気工事士、建築士、ドローンの国家資格を持つ操縦者、臨床心理士、営業アドバイザーが、それぞれの専門分野を担当します。</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="mitsumori.html#phone">電話で相談・見積もり</a>
+      </div>
     </div>
   </section>
 
 </main>
 
-<!-- ひまわり畑 -->
-<div class="field" aria-hidden="true">
-  <svg viewBox="0 0 1440 150" preserveAspectRatio="xMidYMax slice" focusable="false">
-    <path d="M0,95 Q360,55 720,85 T1440,75 L1440,150 L0,150 Z" fill="#7FAF63"/>
-    <path d="M0,120 Q480,88 960,112 T1440,100 L1440,150 L0,150 Z" fill="#55803F"/>
-    <g transform="translate(150,62)"><line x1="0" y1="8" x2="0" y2="52" stroke="#40632F" stroke-width="6" stroke-linecap="round"/><use href="#sunflower" transform="scale(0.26)"/></g>
-    <g transform="translate(400,82)"><line x1="0" y1="8" x2="0" y2="45" stroke="#40632F" stroke-width="5" stroke-linecap="round"/><use href="#sunflower" transform="scale(0.2)"/></g>
-    <g transform="translate(720,58)"><line x1="0" y1="10" x2="0" y2="62" stroke="#40632F" stroke-width="7" stroke-linecap="round"/><use href="#sunflower-face" transform="scale(0.36)"/></g>
-    <g transform="translate(1040,84)"><line x1="0" y1="8" x2="0" y2="42" stroke="#40632F" stroke-width="5" stroke-linecap="round"/><use href="#sunflower" transform="scale(0.21)"/></g>
-    <g transform="translate(1290,66)"><line x1="0" y1="8" x2="0" y2="50" stroke="#40632F" stroke-width="6" stroke-linecap="round"/><use href="#sunflower" transform="scale(0.25)"/></g>
-    <g transform="translate(545,62) scale(1.1) rotate(-8)"><use href="#butterfly"/></g>
-    <g transform="translate(945,50) rotate(10)"><use href="#bee"/></g>
-  </svg>
-</div>
-
 <footer class="footer">
   <div class="container">
-    <div class="footer__main">
-      <div class="footer__brand">
-        <p class="footer__logo">
-          <span class="footer__logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 220 220" width="34" height="34" focusable="false">
-              <use href="#sunflower" transform="translate(110 110)"/>
-            </svg>
-          </span>
-          便利屋ひまわり隊
-        </p>
-        <p class="footer__tag">その他、何でもお受けします</p>
-      </div>
-      <div class="footer__contact">
-        <a class="footer__phone" href="tel:0123259947">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
-          0123-25-9947
-        </a>
-        <p>受付　朝8時 〜 夜8時（年中無休）</p>
-      </div>
+    <div class="footer__brand">
+      <span class="footer__company">NORTH CLUB株式会社</span>
+      <span class="footer__tag">北海道のプロ代行サービス「えぞ助」</span>
     </div>
-    <p class="footer__copy">© 便利屋ひまわり隊 All Rights Reserved.</p>
+    <div class="footer__links">
+      <a href="index.html">トップへ</a>
+      <a href="mitsumori.html#phone">電話窓口のご案内</a>
+    </div>
   </div>
 </footer>
-
-<!-- モバイル固定CTA -->
-<div class="sticky-cta" aria-hidden="false">
-  <a href="tel:0123259947" class="sticky-cta__phone">
-    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg>
-    0123-25-9947
-  </a>
-  <a href="#contact" class="sticky-cta__mail">
-    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 7L4.5 6.2c-.3-.2-.5 0-.5.3v.4l8 5.4 8-5.4v-.4c0-.3-.2-.5-.5-.3L12 11z"/></svg>
-    メールでご相談
-  </a>
-</div>
 
 <script src="script.js"></script>
 </body>
