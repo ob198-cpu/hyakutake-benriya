@@ -27,10 +27,11 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 96px; font-size: 17.5px; }
+/* 画面が広いほど文字も大きく（モバイル17px 〜 ワイド画面22px） */
+html { scroll-behavior: smooth; scroll-padding-top: 96px; font-size: clamp(17px, 11px + 0.55vw, 22px); }
 
 /* 文字を大きくする（シニア向け・全ページ共通、remが全て連動） */
-html.text-large { font-size: 20.5px; }
+html.text-large { font-size: clamp(20px, 13px + 0.65vw, 26px); }
 
 body {
   font-family: var(--font-sans);
@@ -47,9 +48,9 @@ img { max-width: 100%; display: block; }
 a { color: var(--green-700); }
 
 .container {
-  max-width: 1080px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(20px, 3vw, 48px);
 }
 
 /* ---------- ヘッダー ---------- */
@@ -187,7 +188,7 @@ a { color: var(--green-700); }
 }
 
 .section__lead {
-  max-width: 820px;
+  max-width: 48em;
   color: var(--ink);
 }
 
