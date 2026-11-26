@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="lp.css?v=1" />
+<link rel="stylesheet" href="lp.css?v=2" />
 </head>
 <body>
 
@@ -26,9 +26,13 @@
 
   <!-- ヒーロー -->
   <section class="hero band">
-    <figure class="hero__photo">
-      <img src="../assets/hero-winter.jpg" alt="えぞ助の店舗と除雪作業の様子" />
-      <figcaption class="hero__caption">面倒なこと、ぜんぶ代行します。</figcaption>
+    <figure class="hero__photo" id="heroSlides">
+      <img src="../assets/slides/josetsu-1.jpg" alt="えぞ助の店舗前で除雪作業をするホイールローダー" class="is-active" />
+      <img src="../assets/slides/josetsu-2.jpg" alt="駐車場の除雪作業の様子" loading="lazy" />
+      <img src="../assets/slides/josetsu-3.jpg" alt="除雪機での雪かき作業" loading="lazy" />
+      <img src="../assets/slides/josetsu-4.jpg" alt="大型除雪受付中のホイールローダー" loading="lazy" />
+      <img src="../assets/slides/josetsu-5.jpg" alt="小型ローダーによる住宅前の除雪" loading="lazy" />
+      <figcaption class="hero__caption">除雪・大掃除、冬のお困りごと受付中。</figcaption>
     </figure>
     <p class="pill-label">暮らしの代行なら</p>
     <h1 class="hero__title"><span class="nw">プロの代行サービス</span><br /><strong>えぞ助</strong>に<span class="nw">おまかせ！</span></h1>
@@ -122,7 +126,7 @@
   <section class="band band--amber-soft" id="ie">
     <p class="pill-label pill-label--amber">代行メニュー その2</p>
     <h2 class="band__title">お家まわりの作業代行</h2>
-    <p class="band__lead">重たい・高い・大変な作業は、プロに代わってください。道具も人手もこちらで用意します。</p>
+    <p class="band__lead">重たい・高い・大変な作業は、プロが代わりに行います。まずは状況をお聞かせください。</p>
     <div class="svc-grid">
       <article class="svc">
         <h3>お掃除・片付けサービス</h3>
@@ -205,6 +209,7 @@
     <p class="pill-label pill-label--amber">料金のご案内</p>
     <h2 class="band__title">わかりやすい料金</h2>
     <p class="band__lead">まずは内容をお聞きしてお見積もりします。</p>
+    <div class="price-wrap">
     <div class="price-big">
       <p class="price-big__label">基本料金</p>
       <p class="price-big__num">1時間 <strong>3,300円</strong> 〜</p>
@@ -218,6 +223,7 @@
       <tr><td>パソコンサポート・ホームページ制作</td><td>お見積もり</td></tr>
       <tr><td>代理・相談・各種代行</td><td>お見積もり</td></tr>
     </table>
+    </div>
     <p class="band__note">※ 表示はすべて税込価格です。出張費・資材費・作業内容に応じた費用が別途かかる場合があります。</p>
   </section>
 
@@ -323,5 +329,17 @@
   <a class="sticky-bar__tel" href="tel:0123259947">電話で無料相談・お見積もり　0123-25-9947</a>
 </div>
 
+<script>
+(function () {
+  var slides = document.querySelectorAll("#heroSlides img");
+  if (slides.length < 2) return;
+  var i = 0;
+  setInterval(function () {
+    slides[i].classList.remove("is-active");
+    i = (i + 1) % slides.length;
+    slides[i].classList.add("is-active");
+  }, 3000);
+})();
+</script>
 </body>
 </html>

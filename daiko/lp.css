@@ -129,13 +129,20 @@ a { color: var(--green-700); }
 .hero__photo {
   position: relative;
   margin: 0 auto 1.6em;
+  height: clamp(14em, 46vh, 60vh);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 .hero__photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-height: 60vh;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius);
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
+.hero__photo img.is-active { opacity: 1; }
 .hero__caption {
   position: absolute;
   right: 1em;
@@ -209,7 +216,7 @@ a { color: var(--green-700); }
 /* ---------- お困りごと ---------- */
 .bubble-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1em;
   margin-top: 1.2em;
 }
@@ -241,7 +248,7 @@ a { color: var(--green-700); }
 /* ---------- サービスカード ---------- */
 .svc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.2em;
   text-align: left;
 }
@@ -276,7 +283,16 @@ a { color: var(--green-700); }
 .svc--wide h3 { font-size: 1.35em; color: var(--amber-deep); margin-bottom: 0.3em; }
 
 /* ---------- 料金 ---------- */
+.price-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.price-wrap .price-table { flex: 1 1 24em; max-width: 60em; }
 .price-big {
+  flex: 0 0 auto;
   background: var(--white);
   border: 3px solid var(--green-700);
   border-radius: var(--radius);
@@ -399,7 +415,7 @@ a { color: var(--green-700); }
 .faq {
   text-align: left;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1em;
   margin-top: 1.4em;
 }
@@ -488,6 +504,12 @@ a { color: var(--green-700); }
 }
 .sticky-bar__tel:hover { background: var(--amber-deep); }
 
+/* ---------- 中間幅 ---------- */
+@media (max-width: 1100px) {
+  .svc-grid, .bubble-grid { grid-template-columns: repeat(2, 1fr); }
+  .sticky-bar__label { display: none; }
+}
+
 /* ---------- 狭い画面 ---------- */
 @media (max-width: 720px) {
   .band { padding: 2.2em 16px; }
@@ -495,7 +517,8 @@ a { color: var(--green-700); }
   .band__title { font-size: 1.6em; }
   .cta__tel { font-size: 2.2em; }
   .top__company { display: none; }
-  .sticky-bar__label { display: none; }
   .sticky-bar__tel { font-size: 1em; padding: 0.5em 0.8em; line-height: 1.45; }
-  .faq { grid-template-columns: 1fr; }
+  .svc-grid, .bubble-grid, .faq { grid-template-columns: 1fr; }
+  .hero__photo { height: 15em; }
+  .hero__caption { font-size: 0.95em; right: 0.6em; bottom: 0.6em; }
 }
