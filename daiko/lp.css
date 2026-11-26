@@ -154,9 +154,10 @@ a { color: var(--magenta); }
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.9s ease;
+  transform: scale(1.07);
+  transition: opacity 0.9s ease, transform 4.2s ease-out;
 }
-.hero__photo img.is-active { opacity: 1; }
+.hero__photo img.is-active { opacity: 1; transform: scale(1); }
 
 .pill-label {
   display: inline-block;
@@ -190,36 +191,50 @@ a { color: var(--magenta); }
   letter-spacing: 0.05em;
 }
 
-/* ---------- 吹き出し ---------- */
-.bubble-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.1em 1em;
-  margin-top: 1.2em;
+/* ---------- お困りごとチェックリスト ---------- */
+.hl {
+  background: linear-gradient(transparent 62%, #FBD3E0 62%);
+  padding: 0 0.1em;
 }
-.bubble {
+.worry {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.4em;
   background: var(--white);
-  border-radius: var(--r-md);
-  padding: 0.95em 1.2em;
-  font-weight: 500;
-  font-size: 0.95em;
-  position: relative;
+  border-radius: var(--r-lg);
+  padding: 0.8em clamp(1.2em, 3vw, 2.6em);
+  max-width: 58em;
+  margin: 1.2em auto 0;
   text-align: left;
 }
-.bubble::after {
-  content: "";
-  position: absolute;
-  left: 2em;
-  bottom: -0.62em;
-  border: 0.34em solid transparent;
-  border-top-color: var(--white);
+.worry li {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.85em 0;
+  font-weight: 700;
+  border-bottom: 2px dotted #EAD9C8;
 }
-.bubble-answer {
-  margin-top: 1.5em;
-  font-size: 1.55em;
+.worry li:nth-last-child(-n+2) { border-bottom: none; }
+.worry li .ms { color: var(--pink); font-size: 1.5em; flex: 0 0 auto; }
+.worry__arrow {
+  display: block;
+  margin: 0.35em auto 0.1em;
+  font-size: 2.6em;
+  color: var(--pink);
+  animation: bob 1.6s ease-in-out infinite;
+}
+.answer { margin-top: 0.2em; }
+.answer span {
+  display: inline-block;
+  background: var(--grad-docchi);
+  color: var(--white);
+  font-size: 1.6em;
   font-weight: 900;
-  color: var(--magenta);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
+  border-radius: var(--r-pill);
+  padding: 0.35em 1.6em;
 }
 
 /* ---------- あなたはどっち？ ---------- */
@@ -734,9 +749,69 @@ a { color: var(--magenta); }
 .sticky-bar__arrow { font-size: 1.25em; font-weight: 900; }
 .sticky-bar__tel:hover { opacity: 0.9; }
 
+/* ---------- アニメーション ---------- */
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(0.18em); }
+}
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(0.22em); }
+}
+@keyframes ring {
+  0%, 86%, 100% { transform: rotate(0); }
+  88% { transform: rotate(-14deg); }
+  91% { transform: rotate(12deg); }
+  94% { transform: rotate(-9deg); }
+  97% { transform: rotate(6deg); }
+}
+@keyframes pop {
+  0% { transform: scale(0.4); opacity: 0; }
+  70% { transform: scale(1.18); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes rise {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* スクロールで現れる（JSが .reveal を付けたものだけ隠す） */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.4em);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-in { opacity: 1; transform: none; }
+.answer.reveal { transform: scale(0.85); }
+.answer.reveal.is-in { transform: none; }
+.worry li.is-in .ms { animation: pop 0.55s 0.25s both; }
+
+/* 写真のホバー拡大 */
+.tile img, .branch__photo { transition: transform 0.6s ease; }
+.tile:hover img, .branch__card:hover .branch__photo { transform: scale(1.06); }
+
+/* アイコン・ボタンの動き */
+.item__icon { transition: transform 0.25s ease, background 0.25s ease; }
+.item:hover .item__icon { transform: scale(1.15) rotate(-6deg); }
+.farrow { animation: nudge 1.4s ease-in-out infinite; }
+.cta__telicon, .maigo__tel .ms { animation: ring 3.2s ease-in-out infinite; transform-origin: 50% 60%; }
+.sticky-bar { animation: rise 0.6s 0.4s both cubic-bezier(0.2, 0.7, 0.2, 1); }
+.sticky-bar__arrow { animation: nudge 1.2s ease-in-out infinite; display: inline-block; }
+.branch__arrow { animation: bob 1.6s ease-in-out infinite; }
+.promise { transition: transform 0.2s ease; }
+.promise:hover { transform: translateY(-2px); }
+.btn-outline, .maigo__tel, .branch__pill { transition: transform 0.2s ease, background 0.2s ease; }
+.btn-outline:hover, .maigo__tel:hover, .branch__pill:hover { transform: translateY(-2px); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+  .hero__photo img { transform: none; }
+}
+
 /* ---------- 中間幅 ---------- */
 @media (max-width: 1100px) {
-  .menu, .bubble-grid, .tiles { grid-template-columns: repeat(2, 1fr); }
+  .menu, .tiles { grid-template-columns: repeat(2, 1fr); }
   .sticky-bar__label { display: none; }
   .flow { flex-wrap: wrap; gap: 1.6em 0.5em; }
   .fstep { flex: 1 1 14em; }
@@ -759,7 +834,9 @@ a { color: var(--magenta); }
   .tile figcaption { font-size: 0.82em; padding: 1.4em 0.6em 0.5em; }
   .sticky-bar { padding: 0.4em 12px; }
   .sticky-bar__tel { font-size: 0.98em; }
-  .menu, .bubble-grid, .reason-list, .faq, .gallery, .plan-area, .branch { grid-template-columns: 1fr; }
+  .menu, .worry, .reason-list, .faq, .gallery, .plan-area, .branch { grid-template-columns: 1fr; }
+  .worry li:nth-last-child(2) { border-bottom: 2px dotted #EAD9C8; }
+  .answer span { font-size: 1.2em; padding: 0.4em 1.1em; }
   .reason-list { gap: 1.8em; }
   .plan-area { gap: 1.8em; }
   .hero__photo { height: 13em; }
@@ -776,6 +853,7 @@ a { color: var(--magenta); }
     border-top: 0.7em solid var(--pink);
     border-bottom: none;
     margin: -0.5em 0;
+    animation-name: bob;
   }
   .plan__price strong { font-size: 2.4em; }
   .maigo__tel { font-size: 0.95em; padding: 0.45em 1.2em; }
