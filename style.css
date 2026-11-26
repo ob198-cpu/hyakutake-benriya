@@ -31,15 +31,15 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
 body {
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: 17.5px;
+  line-height: 1.75;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
 }
 
 /* 文字を大きくする（シニア向け・全ページ共通） */
-html.text-large body { font-size: 19px; }
+html.text-large body { font-size: 20.5px; }
 html.text-large .hero__title { font-size: clamp(2rem, 5.4vw, 3.2rem); }
 
 img { max-width: 100%; display: block; }
@@ -101,7 +101,7 @@ a { color: var(--green-700); }
   text-decoration: none;
   color: var(--green-800);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 6px 2px;
   border-bottom: 2px solid transparent;
 }
@@ -138,7 +138,7 @@ a { color: var(--green-700); }
   padding: 13px 26px;
   border-radius: 6px;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   text-decoration: none;
   cursor: pointer;
   border: 2px solid var(--green-700);
@@ -169,16 +169,16 @@ a { color: var(--green-700); }
 }
 
 /* ---------- セクション共通 ---------- */
-.section { padding: 64px 0; }
+.section { padding: 44px 0; }
 .section--cream { background: var(--cream); }
 .section--mint { background: var(--green-100); }
 .section--line { border-top: 1px solid var(--line); }
 
 .section__title {
-  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+  font-size: clamp(1.6rem, 3.6vw, 2.2rem);
   font-weight: 900;
   color: var(--green-800);
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   letter-spacing: 0.02em;
 }
 
@@ -198,7 +198,7 @@ a { color: var(--green-700); }
 /* ---------- ヒーロー（トップ） ---------- */
 .hero {
   background: var(--green-100);
-  padding: 56px 0 64px;
+  padding: 36px 0 44px;
 }
 
 .hero__title {
@@ -210,10 +210,10 @@ a { color: var(--green-700); }
   margin-bottom: 14px;
 }
 
-.hero__lead { font-size: 1.05rem; color: var(--ink); }
+.hero__lead { font-size: 1.12rem; color: var(--ink); }
 
 .hero__figure {
-  margin-top: 40px;
+  margin-top: 28px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -248,7 +248,7 @@ a { color: var(--green-700); }
 .senior-band__inner {
   display: grid;
   grid-template-columns: minmax(0, 420px) 1fr;
-  gap: 44px;
+  gap: 32px;
   align-items: center;
 }
 
@@ -290,9 +290,9 @@ a { color: var(--green-700); }
   margin-bottom: 10px;
 }
 
-.card p { font-size: 0.95rem; color: var(--ink-soft); }
+.card p { font-size: 1rem; color: var(--ink-soft); }
 
-html.text-large .card p { font-size: 1rem; }
+html.text-large .card p { font-size: 1.05rem; }
 
 .section__note {
   margin-top: 18px;
@@ -372,12 +372,12 @@ html.text-large .card p { font-size: 1rem; }
 }
 
 /* ---------- シルバーページ ヒーロー ---------- */
-.silver-hero { padding: 56px 0; }
+.silver-hero { padding: 36px 0; }
 
 .silver-hero__inner {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 44px;
+  gap: 32px;
   align-items: center;
 }
 
@@ -467,8 +467,8 @@ html.text-large .card p { font-size: 1rem; }
 .footer {
   background: var(--green-900);
   color: #E9EFE8;
-  padding: 36px 0 44px;
-  margin-top: 72px;
+  padding: 30px 0 36px;
+  margin-top: 44px;
 }
 
 .footer__brand {
@@ -513,7 +513,7 @@ html.text-large .card p { font-size: 1rem; }
 }
 
 @media (max-width: 640px) {
-  .section { padding: 48px 0; }
+  .section { padding: 36px 0; }
 
   .card-grid--3, .card-grid--2, .card-grid--4 { grid-template-columns: 1fr; }
 
