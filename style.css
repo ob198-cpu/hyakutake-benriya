@@ -27,20 +27,20 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; font-size: 17.5px; }
+
+/* 文字を大きくする（シニア向け・全ページ共通、remが全て連動） */
+html.text-large { font-size: 20.5px; }
 
 body {
   font-family: var(--font-sans);
-  font-size: 17.5px;
+  font-size: 1rem;
   line-height: 1.75;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
 }
 
-/* 文字を大きくする（シニア向け・全ページ共通） */
-html.text-large body { font-size: 20.5px; }
-html.text-large .hero__title { font-size: clamp(2rem, 5.4vw, 3.2rem); }
 
 img { max-width: 100%; display: block; }
 
@@ -93,9 +93,13 @@ a { color: var(--green-700); }
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 26px;
+  flex-wrap: wrap;
+  gap: 8px 26px;
   list-style: none;
+  justify-content: flex-end;
 }
+
+.nav__list a { white-space: nowrap; }
 
 .nav__list a {
   text-decoration: none;
@@ -292,8 +296,6 @@ a { color: var(--green-700); }
 
 .card p { font-size: 1rem; color: var(--ink-soft); }
 
-html.text-large .card p { font-size: 1.05rem; }
-
 .section__note {
   margin-top: 18px;
   font-size: 0.9rem;
@@ -463,6 +465,136 @@ html.text-large .card p { font-size: 1.05rem; }
   border: 1px solid var(--line);
 }
 
+/* ---------- サービス一覧・料金ページ ---------- */
+.promise-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.promise {
+  background: #fff;
+  border: 2px solid var(--green-700);
+  color: var(--green-800);
+  border-radius: 999px;
+  padding: 6px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.bubble-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.bubble {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.bubble-answer {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--green-800);
+}
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.svc {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 18px 14px;
+}
+
+.svc--wide { grid-column: 1 / -1; }
+
+.svc h3 {
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: var(--green-800);
+  margin-bottom: 6px;
+}
+
+.svc p { font-size: 0.98rem; color: var(--ink-soft); }
+
+.svc .tags {
+  font-size: 0.95rem;
+  color: var(--green-600);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.price-big {
+  background: #fff;
+  border: 2px solid var(--green-700);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.price-big__label { font-weight: 700; color: var(--green-700); }
+
+.price-big strong {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--green-800);
+  line-height: 1.3;
+}
+
+.price-big__note { font-weight: 700; margin-top: 4px; }
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.price-table th { background: var(--cream); color: var(--green-900); }
+
+.price-table td:last-child {
+  white-space: nowrap;
+  font-weight: 700;
+  color: var(--green-800);
+  width: 11em;
+}
+
+.tel-hours { font-weight: 700; color: var(--green-800); margin-top: 4px; }
+
+.footer__tel {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.footer__tel a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+
 /* ---------- フッター ---------- */
 .footer {
   background: var(--green-900);
@@ -498,9 +630,34 @@ html.text-large .card p { font-size: 1.05rem; }
   font-size: 0.92rem;
 }
 
+/* ---------- スマホ固定の電話ボタン ---------- */
+.sticky-tel {
+  display: none;
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 110;
+  background: var(--green-700);
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 14px 10px;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(20, 58, 48, 0.35);
+}
+
+@media (max-width: 640px) {
+  .sticky-tel { display: block; }
+  body { padding-bottom: 70px; }
+}
+
 /* ---------- レスポンシブ ---------- */
 @media (max-width: 860px) {
   .card-grid--3, .card-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .svc-grid, .bubble-grid { grid-template-columns: repeat(2, 1fr); }
 
   .senior-band__inner,
   .silver-hero__inner {
@@ -515,7 +672,8 @@ html.text-large .card p { font-size: 1.05rem; }
 @media (max-width: 640px) {
   .section { padding: 36px 0; }
 
-  .card-grid--3, .card-grid--2, .card-grid--4 { grid-template-columns: 1fr; }
+  .card-grid--3, .card-grid--2, .card-grid--4,
+  .svc-grid, .bubble-grid { grid-template-columns: 1fr; }
 
   .header__logo img { height: 46px; }
   .header__company { display: none; }
