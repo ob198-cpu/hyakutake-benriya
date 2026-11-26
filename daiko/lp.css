@@ -354,6 +354,8 @@ a { color: var(--magenta); }
   gap: 1em;
   margin-bottom: 1.2em;
 }
+.tiles.tiles--3 { grid-template-columns: repeat(3, 1fr); }
+.tiles--3 .tile img { aspect-ratio: 16 / 10; }
 .tile { position: relative; border-radius: var(--r-md); overflow: hidden; }
 .tile img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .tile figcaption {
@@ -751,6 +753,7 @@ a { color: var(--magenta); }
   .top__brand { font-size: 0.9em; }
   .top__logo img { height: 4.2em; }
   .tiles { gap: 0.6em; }
+  .tiles.tiles--3 { grid-template-columns: 1fr; }
   .tile figcaption { font-size: 0.82em; padding: 1.4em 0.6em 0.5em; }
   .sticky-bar { padding: 0.4em 12px; }
   .sticky-bar__tel { font-size: 0.98em; }
