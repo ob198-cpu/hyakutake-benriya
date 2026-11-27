@@ -10,6 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" rel="stylesheet" />
 <link rel="stylesheet" href="lp.css?v=11" />
+<!-- Google 広告タグ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18551840987"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18551840987');
+</script>
 </head>
 <body>
 
@@ -489,6 +497,20 @@
     i = (i + 1) % slides.length;
     slides[i].classList.add("is-active");
   }, 3000);
+})();
+
+/* 電話ボタンのタップを Google 広告の成果（見積もりのリクエスト）として記録 */
+(function () {
+  Array.prototype.forEach.call(document.querySelectorAll('a[href^="tel:"]'), function (a) {
+    a.addEventListener("click", function () {
+      if (typeof gtag !== "function") return;
+      gtag("event", "conversion", {
+        send_to: "AW-18551840987/Lo_oCND19rAdENvBmo5F",
+        value: 1.0,
+        currency: "JPY"
+      });
+    });
+  });
 })();
 
 (function () {
